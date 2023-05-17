@@ -1,0 +1,111 @@
+[
+    {
+        "firstName": "Elton",
+        "lastName": "Mpinyuri",
+        "Overview": "I am a selfmotivated individual who is inspired to enhance his professional skills to achieve organizational success.I am determined to make an influential role in the fields of commerce and finance. I have a growing interest in financial markets and global economic issues.I have been writing production software in a variety of languages for over one and half years in the insurance industry.I have a deep driven passion for software, automation, and data Engineering. This very CV was even compiled with code.",
+        "contactNo": ["+27785331736", "+27793258275"],
+        "address": "566 Milpark Mews,c/o of Barry Hertzog and Empire Road, Braamfointein Werf,Johannessburg, 2194",
+        "contactEmail":["ebmpinyuri@gmai8l.com","eltonm@live.co.uk"],
+        "employment":[
+            {
+                "CompanyName": "NEXUS SCM",
+                "occupation": "Financial Intern",
+                "startPeriod": "May 2018",
+                "endPeriod": "Dec 2018",
+                "Location": "Johannesburg, Gauteng",
+                "JobDetail": [
+                    "Provide for the propere valuation, control, documentation and benefit tracking of special projects",
+                    "Preparing reports on the above information and communicating the insights,trends and patterns"
+                ]
+            },
+            {
+                "CompanyName": "AFRICA CENTRE OF EVIDENCE",
+                "occupation":"Financial Administrator",
+                "startPeriod": "Feb 2019",
+                "endPeriod": "Oct 2022",
+                "Location": "Johannesburg, Gauteng",
+                "JobDetail": [
+                    "Facilitating the administrative procedures that sustain the research centre on daily basis ,internal auditing of other entity divisions and substantiating their financial information on a monthly basis.",
+                    "Preparation of financial reports by collecting,analysing and summarizing account information and reporting to the Director",
+                    "Maintaining Account Controls by preparing and recommending policies and procedures","Creating comprehensive reports on cashflows,funding income,expenses"
+                ]
+            },
+            {
+                "CompanyName": "DIGITAL SOLUTION FOUNDRY",
+                "occupation": "Software Developer/Data Analyst",
+                "startPeriod": "Nov 2022",
+                "endPeriod": "Present",
+                "Location": "Johannesburg, Gauteng",
+                "JobDetail": [
+                    "data wrangling and management for different environments using Microsoft Azure Services",
+                    "Creating data visualisations and real-time dashboards for financial reporting",
+                    "handling event driven policy model on platforms that integrate risk management practices for client specific needs","Building frontend user expriences using Vue, React and Angular Frameworks"
+                ]
+            }
+        ],
+        "Education": [
+            {
+                "qualification":"Bachelors of Commerce: Econometrics",
+                "Institution":"University of Pretoria",
+                "Location": "Tshwane",
+                "startPeriod":"2010",
+                "endPeriod":"2014",
+                "Overview":""
+
+            },
+            {
+                "qualification":"Bachelors of Commerce (Hons): Economics",
+                "Institution":"University of Johannesburg",
+                "Location": "Johannesburg",
+                "startPeriod":"2015",
+                "endPeriod":"2015",
+                "Overview":"Dissertation:Energy Demands in South Africa"
+
+            },
+            {
+                "qualification":"Masters of Commerce in Finance",
+                "Institution":"University of Johannesburg",
+                "Location":"Johannesburg",
+                "startPeriod":"2016",
+                "endPeriod":"2019",
+                "Overview":"Thesis:Beyond Cryptocurrencies The Financial Application of Blockchain Technology"
+
+            }
+        ],
+        "Skills":[
+            {
+                "Languages": ["Python", "Lua", "Javascript","Typescript","Bash", "R", "T-SQL", "CSharp"],
+                "versionControl": ["Git", "Bitbucket"],
+                "textEditor": ["VS code", "Visual Studio", "RStudio", "Juypter Notebook"],
+                "Microsoft": ["Excel", "Word", "Power BI", "SQL Server Management Studio", "Azure DevOps"]
+
+            }
+        ],
+        "Certifications":[
+            {
+                "qualification": "Google Data Analytics Certificate",
+                "Overview":"Data Analytics",
+                "Location":"Online (Coursera)",
+                "endPeriod":"2022"
+            },
+            {
+                "qualification": "Perian Data Analytics",
+                "Overview": "Python for financial analysis and algorithmic tarding",
+                "Location": "Online (Udemy)",
+                "endPeriod":"2021"
+            },
+            {
+                "qualification": "Learn Programming Academy",
+                "Overview":"Python Programming Masterclass",
+                "Location":"Online (Udemy)",
+                "endPeriod":"2020"
+            },
+            {
+                "qualification": "Pyramid Learning",
+                "Overview":"Project Management in the Devlopment Sector",
+                "Location":"Online (Pyramid Learning)",
+                "endPeriod":"2020"
+            }
+        ]
+    }
+]
