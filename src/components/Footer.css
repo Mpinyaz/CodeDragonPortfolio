@@ -1,0 +1,36 @@
+.container-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  background: #b92b27;
+  /* background: -webkit-linear-gradient(to right, #b92b27, #1565c0); */
+  background: linear-gradient(to right, #b92b27, #1565c0);
+  padding: 20px 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: lighter;
+  max-height: 40px;
+  box-shadow: 0 0 3px #000;
+  margin: 0 auto;
+  width: 100%;
+}
+.container-footer nav a {
+  text-decoration: none;
+  color: white;
+  padding-right: 20px;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding-right: 30px;
+}
+.container-footer > nav {
+  position: flex;
+  gap: 10px;
+  transition: all 0.3s ease 0s;
+  align-content: space-between;
+}
