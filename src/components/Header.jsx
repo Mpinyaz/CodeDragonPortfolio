@@ -1,27 +1,44 @@
 import logo from "../images/dragon.png";
-import "./Header.css"
+import "./Header.css";
 
 export const Header = () => {
-    return (
-      <div class="container-header">
-        <a href="https://www.google.com" class="brand">
-          <img src={logo} alt="" class="logo" />
-          <div>Code Dragon</div>
-        </a>
-        <nav>
-          <a id="about" class="link-list" href="">
-            About
-          </a>
-          <a id="blog" class="link-list"  href="">
-            Services
-          </a>
-          <a id="projects" class="link-list" href="">
-            Projects
-          </a>
-        </nav>
-        <a class="link-list" id="contact" href="">
-          <button>Contact Me</button>
-        </a>
-      </div>
-    );
-}
+  return (
+    <div className="container-header">
+      <nav>
+        <ul className="menu">
+          <li className="logo">
+            <a href="https://www.google.com">
+              <img src={logo} alt="logo" className="image" />
+              Code Dragon
+            </a>
+          </li>
+          <li>
+            <a className="items" href="">
+              Home
+            </a>
+          </li>
+          <li>
+            <a className="items" href="">
+              About
+            </a>
+          </li>
+          <li>
+            <a className="items" href="">
+              Services
+            </a>
+          </li>
+          <li>
+            <a className="items" href="">
+              Projects
+            </a>
+          </li>
+          <li>
+            <a className="items" href="">
+              <button>Contact Me</button>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  );
+};

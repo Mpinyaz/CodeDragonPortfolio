@@ -36,8 +36,10 @@ export const MyComponent = () => {
   return (
     <div ref={vantaRef} className="container-content">
       <img src="src/images/Elton.jpeg" alt="Profile Pic" />
+      <div className="card">
       <h1>Elton Mpinyuri </h1>
       <h2>Software Developer/Data Engineer</h2>
+      </div>
       <div className="social-link">
         <ul>
           <li>

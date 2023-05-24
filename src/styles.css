@@ -1,7 +1,10 @@
-    @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
 * {
   font-family: Poppins;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  /* --backgrnd: #b92b27; */
+  /* --backgrnd: -webkit-linear-gradient(to right, #b92b27, #1565c0); */
+  --backgrnd: linear-gradient(to right, #b92b27, #1565c0);
 }

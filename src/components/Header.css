@@ -1,99 +1,74 @@
-    @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
-    .container-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: absolute;
-        /* top: 0; */
-        padding: 10px 15px;
-        /* font-family: "Odibee Sans", cursive; */
-        font-family: 'Poppins', sans-serif;
-        background: #b92b27;
-        /* background: -webkit-linear-gradient(to right, #b92b27, #1565c0); */
-        background: linear-gradient(to right, #b92b27,#1565c0);
-        font-size: 30px;
-        font-weight: bold;
-        /* max-height: 40px; */
-        /* gap: 1em; */
-        box-shadow: 0 0 3px #000;
-        margin: 0 auto;
-        /* height: 80px; */
-        width: 100%;
+.container-header {
+  background: var(--backgrnd);
+  font-family: "Poppins", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  box-shadow: 0 0 3px #000;
+  margin: 0 auto;
+  width: 100%;
+}
 
-    }
-    .container-header a {
-        text-decoration: none;
-    }
-    .logo {
-        border-radius: 50%;
-        cursor: pointer;
-        width: 50px;
-        height: 50px;
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px;
-        margin-left: auto;
-        margin-right: auto;
-      }
+.menu {
+  font-size: 20px;
+  width: 100%;
+  padding: 5px 15px;
+  height: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+}
+.menu > li {
+  white-space: nowrap;
+}
+.menu > ul > a {
+  text-decoration: none;
+}
+.menu > li > a > img {
+  border-radius: 50%;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px;
+}
+.menu button:hover{
+    transition:all .25s;
+}
+.menu button {
+  background-color: transparent;
+  border: 2px teal solid;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  height: 40px;
+  width: 140px;
+  color: white;
+  border-radius: 50em;
+}
 
-    .brand {
-        display:flex;
-        align-content: left;
-        top: 50%;
-        gap: 10px;
-        margin:0%;
-        float: left;
-        /* width: 15%; */
-    }
+.logo > a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.25em;
+  text-decoration: none;
+  font-size: 25px;
+}
 
-    nav {
-        margin:0%;
-        font-size: 20px;
+.logo a:hover {
+  letter-spacing: 1px;
+  color: red;
+}
 
-    }
-    nav .link-list {
-        position: relative;
-        color: white;
-        width: 200px;
-        float: left;
-        top: 50%;
-        justify-items: right;
-        align-content: space-around;
-        transition: all 0.3s ease 0s;
-    }
-   nav a:hover {
-        letter-spacing: 2px;
-        color: grey;
-    }
+.items {
+  color: white;
+  text-decoration: none;
+}
+.items:hover {
+  text-decoration: underline;
+}
 
-    #blog #about:after {
-        content: "";
-        position: absolute;
-        height: 15px;
-        width: 15px;
-        background: pink;
-        top: 50%;
-        left: 100%;
-        transform: translate(-50%, -50%) rotate(45deg);
-        z-index: 30;
-    }
-    #contact {
-        color: white;
-        font-size: 20px;
-        border-radius: 0.25rem;
-        width: 10%;
-        padding-right: 10px;
-    }
 
-    .container-header button {
-        background-color: purple;
-        border: none;
-        font-size: 20px;
-        font-weight: bold;
-        cursor: pointer;
-        height: 40px;
-        width:140px;
-        color: white;
-        border-radius: 4%;
-    }
-    .container button:hover {
-        color:grey;
-    }
+
+
