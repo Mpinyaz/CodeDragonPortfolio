@@ -73,7 +73,7 @@ export const MyComponent = () => {
             </a>
           </li>
         </ul>
-f      </div>
+     </div>
     </div>
   );
 };

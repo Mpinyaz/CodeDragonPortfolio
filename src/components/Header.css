@@ -10,8 +10,7 @@
 
 .menu {
   font-size: 20px;
-  width: 100%;
-  padding: 5px 15px;
+  padding: 0px 15px;
   height: 60px;
   display: flex;
   flex-wrap: wrap;
@@ -21,7 +20,15 @@
 }
 .menu > li {
   white-space: nowrap;
+  position: relative;
+  height: 100%;
 }
+
+.menu > a {
+  display: flex;
+  align-items: center;
+}
+
 .menu > ul > a {
   text-decoration: none;
 }
@@ -32,8 +39,8 @@
   height: 40px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px;
 }
-.menu button:hover{
-    transition:all .25s;
+.menu button:hover {
+  transition: all 0.25s;
 }
 .menu button {
   background-color: transparent;
@@ -45,6 +52,11 @@
   width: 140px;
   color: white;
   border-radius: 50em;
+}
+.logo,
+.btnContact {
+  display: flex;
+  align-items: center;
 }
 
 .logo > a {
@@ -64,11 +76,32 @@
 .items {
   color: white;
   text-decoration: none;
+  position: relative;
+  padding: 0px 40px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid #000;
 }
+
 .items:hover {
   text-decoration: underline;
 }
-
-
-
-
+.items:before {
+  content: "";
+  position: absolute;
+  border-right: 10px solid green;
+}
+.items:after {
+  content: "";
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  top: 50%;
+  border-top: 1px solid #000;
+  border-right: 1px solid #000;
+  left: 100%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background-color: transparent;
+}

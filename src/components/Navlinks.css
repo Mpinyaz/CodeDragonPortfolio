@@ -1,0 +1,51 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  background: tomato;
+  color: white;
+}
+
+.nav_links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+ul > li {
+  position: relative;
+  border-right: solid white;
+  padding: 0 20px;
+  height: 100%;
+  width: 100%;
+}
+ul > li::after {
+  content: "";
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  background: tomato;
+  border-right: 1px solid white;
+  border-top: 1px solid white;
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  z-index: 5;
+}
+
+a {
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+button {
+  outline: none;
+  border: none;
+  background: teal;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: ease-in 0.3s;
+  color: white;
+}

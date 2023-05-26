@@ -32,8 +32,8 @@ export const Header = () => {
               Projects
             </a>
           </li>
-          <li>
-            <a className="items" href="">
+          <li class="btnContact">
+            <a className="btn-contact" href="">
               <button>Contact Me</button>
             </a>
           </li>
