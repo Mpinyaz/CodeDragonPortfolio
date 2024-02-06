@@ -2,7 +2,7 @@ import "./Footer.css"
 export  const Footer = () => {
 
     return (
-      <div class="container-footer">
+      <div className="container-footer">
         <nav>
           <a id="about" href="">
             About
@@ -15,7 +15,7 @@ export  const Footer = () => {
           </a>
         </nav>
 
-        <div class="footer-socials">
+        <div className="footer-socials">
           <a id="Github" href="https://github.com/Mpinyaz">
             <svg
               stroke="currentColor"

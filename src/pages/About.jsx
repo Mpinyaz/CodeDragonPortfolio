@@ -37,8 +37,8 @@ export const MyComponent = () => {
     <div ref={vantaRef} className="container-content">
       <img src="src/images/Elton.jpeg" alt="Profile Pic" />
       <div className="card">
-      <h1>Elton Mpinyuri </h1>
-      <h2>Software Developer/Data Engineer</h2>
+        <h1>Elton Mpinyuri </h1>
+        <h2>Software Developer/Data Engineer</h2>
       </div>
       <div className="social-link">
         <ul>
@@ -73,7 +73,7 @@ export const MyComponent = () => {
             </a>
           </li>
         </ul>
-     </div>
+      </div>
     </div>
   );
 };

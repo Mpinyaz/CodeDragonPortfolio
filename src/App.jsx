@@ -2,13 +2,20 @@ import "./styles.css";
 import { MyComponent } from "./components/AboutContent";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
+import { Routes, Route } from "react-router-dom";
+import NoMatch from "./components/NoMatch";
 
-export default function App() {
+const App = () => {
   return (
     <div className="App">
       <Header />
-      <MyComponent />
+      <Routes>
+        <MyComponent />
+        <Route path="*" element={<NoMatch />} />
+      </Routes>
       <Footer />
     </div>
   );
-}
+};
+
+export default App;
