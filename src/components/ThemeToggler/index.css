@@ -1,0 +1,22 @@
+.theme-toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 1.5rem;
+  width: 1.5rem;
+  left: 4px;
+  bottom: 4px;
+  border-radius: 50%;
+  background-color: var(--color-foreground);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.theme-toggle-input:checked + .theme-toggle-slider:before {
+  -webkit-transform: translateX(2rem);
+  -ms-transform: translateX(2rem);
+  transform: translateX(2rem);
+}
+
+.theme-mode {
+  font-size: 2.25rem;
+}
