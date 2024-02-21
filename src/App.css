@@ -4,3 +4,28 @@
   padding: 0;
   text-align: center;
 }
+
+[data-theme="light"] {
+  --color-foreground: #1111111;
+  --color-background: #f5f5f5;
+  --color-foreground-accent: #000000;
+}
+
+[data-theme="dark"] {
+  --color-foreground: #f5f5f5;
+  --color-background: #111111;
+  --color-foreground-accent: #ffffff;
+}
+
+.app {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  margin: 0;
+  padding: 0;
+}
