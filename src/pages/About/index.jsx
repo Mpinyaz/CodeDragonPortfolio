@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import BIRDS from "vanta/dist/vanta.halo.min";
 import * as THREE from "three";
-import "./ContentAbout.css";
+import "./About.css";
 
 export const MyComponent = () => {
   const [vantaEffect, setVantaEffect] = useState(0);

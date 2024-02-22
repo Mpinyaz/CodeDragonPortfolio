@@ -1,5 +1,5 @@
 import "./Footer.css";
-export const Footer = () => {
+const Footer = () => {
   return (
     <div className="container-footer">
       <nav>
@@ -61,3 +61,5 @@ export const Footer = () => {
     </div>
   );
 };
+
+export default Footer;
