@@ -1,16 +1,16 @@
-import { useState, useEffect, useRef } from "react";
-import BIRDS from "vanta/dist/vanta.halo.min";
+import React, { useState, useEffect, useRef } from "react";
+import HALO from "vanta/dist/vanta.halo.min";
 import * as THREE from "three";
 import "./About.css";
 
-export const MyComponent = () => {
+const About = () => {
   const [vantaEffect, setVantaEffect] = useState(0);
   const vantaRef = useRef(null);
 
   useEffect(() => {
     if (!vantaEffect) {
       setVantaEffect(
-        BIRDS({
+        HALO({
           el: vantaRef.current,
           THREE: THREE,
           mouseControls: true,
@@ -34,11 +34,20 @@ export const MyComponent = () => {
     };
   }, [vantaEffect]);
   return (
-    <div ref={vantaRef} className="container-content">
-      <img src="src/images/Elton.jpeg" alt="Profile Pic" />
+    <div className="w-full h-auto" ref={vantaRef}>
+      <h1>Lets Connect</h1>
       <div className="card">
-        <h1>Elton Mpinyuri </h1>
-        <h2>Software Developer/Data Engineer</h2>
+        <div className="flex flex-row items-center justify-start space-x-3 space-y-1 p-2">
+          <img
+            src="src/images/Elton.jpeg"
+            alt="Profile Pic"
+            className="h-44 w-44 object-cover rounded-full"
+          />
+          <div>
+            <h1 className="text-white text-2xl">Elton Mpinyuri </h1>
+            <h2 className="text-cyan-50">Software Developer/Data Engineer</h2>
+          </div>
+        </div>
       </div>
       <div className="social-link">
         <ul>
@@ -77,3 +86,5 @@ export const MyComponent = () => {
     </div>
   );
 };
+
+export default About;
