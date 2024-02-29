@@ -6,7 +6,7 @@ import PrivateRoutes from "./routes/index";
 const App = () => {
   const router = createBrowserRouter(PrivateRoutes());
   return (
-    <div className="app">
+    <div className="App">
       <RouterProvider router={router} />
     </div>
   );

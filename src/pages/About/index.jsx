@@ -36,7 +36,7 @@ const About = () => {
     };
   }, [vantaEffect]);
   return (
-    <div className="w-full h-auto" ref={vantaRef}>
+    <div className="w-full h-screen" ref={vantaRef}>
       <h1>Lets Connect</h1>
       <div className="card">
         <div className="flex flex-row items-center justify-start space-x-3 space-y-1 p-2">

@@ -3,6 +3,7 @@
   margin: 0 auto;
   padding: 0;
   text-align: center;
+  min-height: 100vh;
 }
 
 [data-theme="light"] {
@@ -17,7 +18,7 @@
   --color-foreground-accent: #ffffff;
 }
 
-.app {
+.App {
   background-color: var(--color-background);
   color: var(--color-foreground);
   font-size: calc(10px + 2vmin);

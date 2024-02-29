@@ -3,7 +3,7 @@ import { FaInstagramSquare, FaLinkedin } from "react-icons/fa";
 import { GrGithub } from "react-icons/gr";
 const Footer = () => {
   return (
-    <div className="container-footer items-center bottom-0 flex max-h-9 m-0 w-full px-2 py-3 justify-between text-base font-semibold">
+    <div className="container-footer items-center flex mt-auto w-full px-2 py-3 justify-between text-base font-semibold">
       <nav className="flex content-between text-white">
         <a id="about" href="/" className="mx-1">
           About
