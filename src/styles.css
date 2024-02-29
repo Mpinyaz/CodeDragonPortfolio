@@ -4,7 +4,9 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  /* --backgrnd: #b92b27; */
-  /* --backgrnd: -webkit-linear-gradient(to right, #b92b27, #1565c0); */
   --backgrnd: linear-gradient(to right, #b92b27, #1565c0);
+}
+
+html {
+  height: 100%;
 }
