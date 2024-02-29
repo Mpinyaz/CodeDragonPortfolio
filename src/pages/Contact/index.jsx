@@ -1,7 +1,7 @@
 import "./contact.css";
 import useDocumentTitle from "../../context/useDocumentTitle";
 const Contact = () => {
-  useDocumentTitle("Contact");
+  useDocumentTitle("Contact - 🐲");
   const arrLinks = [
     {
       title: "LinkedIn",
@@ -43,7 +43,7 @@ const Contact = () => {
   ));
   return (
     <>
-      <section className="flex flex-col md:flex-row bg-indigo-600 py-1  gap-3 px-3">
+      <section className="mt-8 flex flex-col md:flex-row  py-1  gap-3 px-3">
         <div
           id="contentlinks"
           className="contact-card basis-1/2 p-6 flex flex-col"
@@ -60,11 +60,11 @@ const Contact = () => {
           </div>
           <div className="flex-auto flex flex-wrap">{linkList}</div>
         </div>
-        <div className="contact-card basis-1/2 p-6">
+        <div className="contact-card basis-1/2 p-6 ">
           <h1 className="text-5xl font-semibold inline-block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 mb-2">
             Send me mail
           </h1>
-          <form className="flex flex-col justify-center gap-1">
+          <form className="flex flex-col justify-center gap-y-3">
             <label htmlFor="name">Name</label>
             <input
               type="text"
@@ -87,7 +87,7 @@ const Contact = () => {
             ></textarea>
             <button
               type="submit"
-              className="w-full h-10 bg-purple-200  shadow-link-shadow rounded-full gap-x-2 px-4 py-2 flex flex-row items-center justify-center font-semibold"
+              className="mt-2 w-full h-10 bg-purple-200  shadow-link-shadow rounded-full gap-x-2 px-4 py-2 flex flex-row items-center justify-center font-semibold"
             >
               Send Message
             </button>

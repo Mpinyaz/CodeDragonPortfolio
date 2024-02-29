@@ -6,7 +6,10 @@
   box-sizing: border-box;
   --backgrnd: linear-gradient(to right, #b92b27, #1565c0);
 }
+ html, body {
+   background-color: indigo;
+   height:100%;
 
-html {
-  height: 100%;
-}
+ }
+
+

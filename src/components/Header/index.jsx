@@ -3,37 +3,44 @@ import "./Header.css";
 
 const Header = () => {
   return (
-    <div className="container-header">
+    <div className="container-header min-h-12 w-full m-0 p-1">
       <nav>
-        <ul className="menu">
-          <li className="logo">
-            <a href="https://www.google.com">
-              <img src={logo} alt="logo" className="image" />
+        <ul className="flex flex-wrap justify-between items-center font-semibold text-xl gap-x-5 text-white">
+          <li className="flex justify-between items-center">
+            <a
+              href="https://www.google.com"
+              className="font-semibold text-2xl gap-1 flex items-center text-black"
+            >
+              <img
+                src={logo}
+                alt="logo"
+                className="rounded-full cursor-pointer w-10 h-10 shadow-md"
+              />
               Code Dragon
             </a>
           </li>
           <li>
-            <a className="items" href="">
+            <a className="" href="">
               Home
             </a>
           </li>
           <li>
-            <a className="items" href="">
+            <a className="" href="">
               About
             </a>
           </li>
           <li>
-            <a className="items" href="">
+            <a className="" href="">
               Services
             </a>
           </li>
           <li>
-            <a className="items" href="">
+            <a className="" href="">
               Projects
             </a>
           </li>
-          <li className="items-right">
-            <a href="">
+          <li className="">
+            <a href="" className="flex gap-1 items-center">
               <button>Contact Me</button>
               <svg
                 width="24"

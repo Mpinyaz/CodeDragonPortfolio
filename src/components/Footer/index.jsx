@@ -1,20 +1,20 @@
 import "./Footer.css";
 const Footer = () => {
   return (
-    <div className="container-footer">
-      <nav>
-        <a id="about" href="">
+    <div className="container-footer items-center bottom-0 flex mt-1 max-h-9 m-0 w-full px-2 py-3 justify-between text-base font-semibold">
+      <nav className="flex content-between text-white">
+        <a id="about" href="" className="mx-1">
           About
         </a>
-        <a id="blog" href="">
+        <a id="blog" href="" className="mx-1">
           Services
         </a>
-        <a id="projects" href="">
+        <a id="projects" href="" className="mx-1">
           Projects
         </a>
       </nav>
 
-      <div className="footer-socials">
+      <div className="flex gap-x-3 justify-between">
         <a id="Github" href="https://github.com/Mpinyaz">
           <svg
             stroke="currentColor"

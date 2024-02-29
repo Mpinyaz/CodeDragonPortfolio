@@ -5,7 +5,7 @@ import "./About.css";
 import useDocumentTitle from "../../context/useDocumentTitle";
 
 const About = () => {
-  useDocumentTitle("About");
+  useDocumentTitle("Code Dragon About");
   const [vantaEffect, setVantaEffect] = useState(0);
   const vantaRef = useRef(null);
 
