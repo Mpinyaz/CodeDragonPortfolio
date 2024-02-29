@@ -1,29 +1,33 @@
 import "./contact.css";
 import useDocumentTitle from "../../context/useDocumentTitle";
+import { FaInstagramSquare, FaLinkedin } from "react-icons/fa";
+import { GrGithub } from "react-icons/gr";
+import { BiLogoDevTo } from "react-icons/bi";
+import { LuMail } from "react-icons/lu";
 const Contact = () => {
   useDocumentTitle("Contact - 🐲");
   const arrLinks = [
     {
       title: "LinkedIn",
       url: "https://www.linkedin.com/in/elton-mpinyuri-974984134/",
-      icon: "src/images/linkedin-svgrepo-com.svg",
+      icon: <FaInstagramSquare size={25} />,
     },
     {
       title: "Github",
       url: "https://github.com/Mpinyaz",
-      icon: "src/images/github.svg",
+      icon: <GrGithub size={25} />,
     },
     {
       title: "DEVTO",
       url: "https://dev.to/mpinyaz",
-      icon: "src/images/dev-to-svgrepo-com.svg",
+      icon: <BiLogoDevTo size={26} />,
     },
     {
       title: "Instagram",
       url: "https://www.instagram.com/mpinyaz/",
-      icon: "src/images/instagram.svg",
+      icon: <FaInstagramSquare size={25} />,
     },
-    { title: "Email Me", url: "", icon: "src/images/homepage.svg" },
+    { title: "Email Me", url: "", icon: <LuMail size={23} /> },
   ];
   const linkList = arrLinks.map((link) => (
     <div
@@ -35,7 +39,7 @@ const Contact = () => {
           className="flex items-center w-full gap-2 justify-center text-nowrap"
           href={link.url}
         >
-          <img className="w-5 h-5" src={link.icon} alt={link.title} />
+          {link.icon}
           {link.title}
         </a>
       </button>
@@ -43,7 +47,7 @@ const Contact = () => {
   ));
   return (
     <>
-      <section className="mt-8 flex flex-col md:flex-row  py-1  gap-3 px-3">
+      <section className="mt-8 flex flex-col md:flex-row  py-1 gap-3 px-3">
         <div
           id="contentlinks"
           className="contact-card basis-1/2 p-6 flex flex-col"
