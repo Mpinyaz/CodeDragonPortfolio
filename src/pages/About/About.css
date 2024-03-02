@@ -12,6 +12,7 @@
   width: 100%;
   height: 100%;
 }
+
 .container-content > img {
   width: 6em;
   height: 6em;
@@ -26,7 +27,6 @@
   list-style: none;
   margin: 0 auto;
   top: 40px;
-
 }
 
 .social-link > ul > li {
@@ -38,6 +38,7 @@
   margin: 1.4em 0;
   box-shadow: rgb(28 32 93 / 24%) 0px 2px 8px 0px;
 }
+
 .social-link > ul > li > a {
   display: flex;
   justify-content: center;
@@ -45,27 +46,99 @@
   gap: 0.5em;
   text-decoration: none;
 }
+
 .social-link > ul > li > a > img {
-  width: 20px; /* Set the desired width */
+  width: 20px;
+  /* Set the desired width */
   /* height: auto; */
 }
 
 .social-link {
   position: fixed;
-  right:10px;
+  right: 10px;
   top: 60px;
 }
 
 .card {
-background: rgba(255, 255, 255, 0.13);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(12.2px);
--webkit-backdrop-filter: blur(12.2px);
-border: 1px solid rgba(255, 255, 255, 0.58);
-position:fixed;
-top: 100px;
-width:40%;
-height: 40vh;
-color: rgb(30, 0, 128);
+  background: rgba(255, 255, 255, 0.13);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12.2px);
+  -webkit-backdrop-filter: blur(12.2px);
+  border: 1px solid rgba(255, 255, 255, 0.58);
+  position: fixed;
+  top: 100px;
+  width: 40%;
+  height: 40vh;
+  color: rgb(30, 0, 128);
+}
+
+:root {
+  --abtx: 0;
+  --abty: 0;
+  --abtxp: 0;
+  --abtyp: 0;
+  --abthue: calc(0 + (var(--abtxp) * 500));
+  --abtbg: hsl(0 0% 10%);
+  --abtsize: 100px;
+  --abtglow: radial-gradient(
+      50% 50% at center,
+      hsl(var(--abthue) 80% 80%),
+      hsl(var(--abthue) 80% 70%),
+      transparent
+    )
+    calc((var(--abtx) * 1px) - (var(--abtsize) * 0.5))
+    calc((var(--abty) * 1px) - (var(--abtsize) * 0.5)) / var(--abtsize)
+    var(--abtsize) no-repeat fixed;
+}
+
+.about-btn > button {
+  border-radius: 1rem;
+  font-weight: semi-bold;
+  letter-spacing: 0.1ch;
+  background: var(--abtbg);
+  border: 4px solid transparent;
+  box-shadow: 0 1px hsl(0 0% 100% / 0.15) inset;
+  cursor: pointer;
+  background: linear-gradient(var(--abtbg), var(--abtbg)) padding-box,
+    var(--abtglow), linear-gradient(black, black) border-box;
+  transition: background-size 0.24s;
+  touch-action: none;
+  position: relative;
+  padding: 1rem 2rem;
+}
+
+.about-btn > button:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  box-shadow: 0 1px hsl(0 0% 100% / 0.15) inset;
+  background: var(--abtbg);
+  z-index: 2;
+  border-radius: 1rem;
+}
+
+.about-btn > button > span {
+  background: var(--abtglow), white;
+  background-clip: text;
+  color: transparent;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  position: relative;
+  inset: 0;
+}
+
+:root:has(.about-btn > button:active) {
+  --abtsize: 300px;
+}
+
+.about-btn > button::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  filter: blur(20px);
+  border: 4px solid transparent;
+  background: var(--abtglow);
+  border-radius: 1rem;
 }
