@@ -1,15 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
-* {
+
+html,
+body {
+  background-color: indigo;
+  min-height: 100vh;
   font-family: Poppins;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   --backgrnd: linear-gradient(to right, #b92b27, #1565c0);
 }
- html, body {
-   background-color: indigo;
-   min-height:100vh;
-
- }
-
-

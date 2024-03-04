@@ -1,6 +1,6 @@
 import BaseLayout from "../layouts/BaseLayout";
 import { lazy } from "react";
-import NoMatch from "../components/NoMatch";
+import NoMatch from "../components/Error404";
 
 import About from "../pages/About/";
 const Home = lazy(() => import("../pages/Home"));
