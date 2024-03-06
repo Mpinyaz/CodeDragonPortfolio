@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import HALO from "vanta/dist/vanta.halo.min";
 import * as THREE from "three";
 import "./About.css";
@@ -50,22 +50,27 @@ const About = () => {
   document.body.addEventListener("pointermove", syncPointer);
 
   return (
-    <div className="w-full h-screen" ref={vantaRef}>
-      <div className="card">
-        <div className="flex flex-row items-center justify-start space-x-3 space-y-1 p-2">
-          <img
-            src="src/images/Elton.jpeg"
-            alt="Profile Pic"
-            className="h-44 w-44 object-cover rounded-full"
-          />
-          <div>
+    <div className="w-full h-screen " ref={vantaRef}>
+      <div className="card m-3 w-1/2 left-1/4">
+        <div className="flex flex-row ">
+          <div className="w-1/4">
+            <img
+              data-src="src/images/elton-small.jpeg"
+              src="src/images/Elton.jpeg"
+              alt="Profile Pic"
+              className="lazy h-44 w-44 object-cover rounded-full m-2"
+            />
+          </div>
+          <div className="aboutcardtext w-3/4 rounded-tr-2xl rounded-br-2xl flex flex-col ps-3 justify-center items-start">
             <h1 className="text-white text-2xl">Elton Mpinyuri </h1>
-            <h2 className="text-cyan-50">Software Developer/Data Engineer</h2>
+            <h2 className="text-white text-xl">
+              Software Developer/Data Engineer
+            </h2>
           </div>
         </div>
       </div>
-      <div className="bg-gray-200">
-        <div className="about-btn">
+      <div className="card m-3 flex flex-col w-1/2 justify-center left-1/4">
+        <div className="about-btn p-3 flex justify-center">
           <button>
             <span>Finance</span>
           </button>
@@ -75,6 +80,9 @@ const About = () => {
           <button>
             <span>Software Dev</span>
           </button>
+        </div>
+        <div className="aboutcardtext p-3 w-full rounded-br-2xl rounded-bl-2xl">
+          <p className="text-white">Hello Mr Parker</p>
         </div>
       </div>
     </div>
