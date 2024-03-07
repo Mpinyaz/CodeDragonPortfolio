@@ -1,15 +1,15 @@
 import logo from "../../images/dragon.png";
 import "./Header.css";
+import { Link } from "react-router-dom";
 
 const Header = () => {
-
   return (
     <div className="container-header min-h-12 w-full m-0 p-1">
       <nav>
         <ul className="flex flex-wrap justify-between items-center font-semibold text-xl gap-x-5 text-white">
           <li className="flex justify-between items-center">
-            <a
-              href="https://www.google.com"
+            <Link
+              to="/"
               className="font-semibold text-2xl gap-1 flex items-center text-black"
             >
               <img
@@ -18,17 +18,17 @@ const Header = () => {
                 className="rounded-full cursor-pointer w-10 h-10 shadow-md"
               />
               Code Dragon
-            </a>
+            </Link>
           </li>
           <li>
-            <a className="" href="">
+            <Link to="/" className="">
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a className="" href="">
+            <Link to="/about" className="" href="">
               About
-            </a>
+            </Link>
           </li>
           <li>
             <a className="" href="">
@@ -36,12 +36,10 @@ const Header = () => {
             </a>
           </li>
           <li>
-            <a className="" href="">
-              Projects
-            </a>
+            <Link to="/">Projects</Link>
           </li>
           <li className="">
-            <a href="" className="flex gap-1 items-center">
+            <Link to="/contact" className="flex gap-1 items-center">
               <button>Contact Me</button>
               <svg
                 width="24"
@@ -63,7 +61,7 @@ const Header = () => {
                   fill="currentColor"
                 />
               </svg>
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>
