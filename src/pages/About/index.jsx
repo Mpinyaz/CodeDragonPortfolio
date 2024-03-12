@@ -49,42 +49,13 @@ const About = () => {
         };
 
         document.body.addEventListener("pointermove", syncPointer);
-        // useEffect(() => {
-        //   const handleIntersection = (entries, observer) => {
-        //     entries.forEach((entry) => {
-        //       if (entry.isIntersecting) {
-        //         const img = entry.target;
-        //         img.src = img.dataset.src;
-        //         img.classList.remove("lazy");
-        //         observer.unobserve(img);
-        //       }
-        //     });
-        //   };
-        //
-        //   const observer = new IntersectionObserver(handleIntersection, {
-        //     root: null,
-        //     rootMargin: "0px",
-        //     threshold: 0.1,
-        //   });
-        //
-        //   const lazyImages = document.querySelectorAll(".lazy");
-        //
-        //   lazyImages.forEach((img) => {
-        //     observer.observe(img);
-        //   });
-        //
-        //   // Cleanup function to disconnect the observer when the component unmounts
-        //   return () => {
-        //     observer.disconnect();
-        //   };
-        // }, []);
         return (
                 <div className="w-full h-screen " ref={vantaRef}>
                         <div className="card m-3 w-1/2 left-1/4 flex">
                                 <div className="w-1/4 flex justify-center">
                                         <LazyImg
-                                                src="src/images/elton-small.jpeg"
-                                                placeholder="src/images/Elton.jpeg"
+                                                placeholder="src/images/elton-small.jpeg"
+                                                src="src/images/Elton.jpeg"
                                                 alt="Profile Pic"
                                                 className="h-44 w-44 object-cover rounded-full m-2"
                                         />
@@ -154,8 +125,8 @@ const About = () => {
                                         <div className="w-3/4 card text-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                                                 <a href="#">
                                                         <div className="blur-container">
-                                                                <img
-                                                                        className="lazy rounded-tl-2xl object-cover rounded-tr-2xl"
+                                                                <LazyImg
+                                                                        className="rounded-tl-2xl object-cover rounded-tr-2xl"
                                                                         src="src/images/dataEngine2.png"
                                                                         placeholder="src/images/dataEngine.jpg"
                                                                         alt="Data Analysis"
@@ -199,9 +170,9 @@ const About = () => {
                                                 <a href="#">
                                                         <div className="blur-container">
                                                                 <LazyImg
-                                                                        className="lazy rounded-tl-2xl object-cover rounded-tr-2xl"
-                                                                        src="src/images/updatedcode.png"
-                                                                        placeholder="src/images/code.jpg"
+                                                                        className="rounded-tl-2xl object-cover rounded-tr-2xl"
+                                                                        placeholder="src/images/updatedcode.png"
+                                                                        src="src/images/code.jpg"
                                                                         alt="Software Development"
                                                                 />
                                                         </div>
