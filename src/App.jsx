@@ -1,5 +1,4 @@
 import "./styles.css";
-
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import PrivateRoutes from "./routes/index";
 
