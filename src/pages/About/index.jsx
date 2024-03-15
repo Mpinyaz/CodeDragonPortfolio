@@ -50,7 +50,7 @@ const About = () => {
 
   document.body.addEventListener("pointermove", syncPointer);
   return (
-    <div className="w-full h-screen " ref={vantaRef}>
+    <div className="w-full" ref={vantaRef}>
       <div className="card m-3 w-1/2 left-1/4 flex">
         <div className="w-1/4 flex justify-center">
           <LazyImg
