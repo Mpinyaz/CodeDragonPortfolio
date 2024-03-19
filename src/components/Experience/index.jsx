@@ -10,7 +10,7 @@ export function Experience() {
         index % 2 == 0 ? "w-1/2 left-0" : "sm:w-1/2 w-full sm:left-1/2 left-0"
       }`}
     >
-      <div className="text-box rounded-lg bg-white relative">
+      <div className="text-box rounded-lg bg-white relative text-wrap">
         <PiGearSixFill
           className={`timeline-icon absolute bg-white ${
             index % 2 == 0 ? "" : "right"

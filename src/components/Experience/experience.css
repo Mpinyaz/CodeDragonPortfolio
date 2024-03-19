@@ -98,7 +98,7 @@
     padding-left: 5rem;
   }
   .text-box {
-    font-size: 0.81rem;
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
   }
   .text-box small {
     margin: 0rem 0rem 0.625rem 0rem;

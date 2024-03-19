@@ -37,6 +37,7 @@
 
 .text-box {
   padding: 1.25rem 1.875rem;
+  font-size: clamp(0.81rem, 1.5vw, 1rem);
 }
 
 .timeline-icon {
