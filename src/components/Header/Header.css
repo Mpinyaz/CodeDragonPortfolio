@@ -2,6 +2,8 @@
   background: var(--backgrnd);
   font-family: "Poppins";
   box-shadow: 0 0 3px #000;
-
 }
 
+.container-header ul li {
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+}

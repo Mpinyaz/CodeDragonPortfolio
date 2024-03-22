@@ -1,71 +1,132 @@
+import { useRef, useState, useEffect } from "react";
 import logo from "../../images/dragon.png";
 import "./Header.css";
 import { Link } from "react-router-dom";
 
 const Header = () => {
+  const menuToggle = useRef(null);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const headerRef = useRef(null);
+
+  useEffect(() => {
+    // Dynamically adjust padding of content area based on header height
+    const updatePadding = () => {
+      const headerHeight = headerRef.current.offsetHeight;
+      document.body.style.paddingTop = `${headerHeight}px`;
+    };
+
+    // Call updatePadding initially and on window resize
+    updatePadding();
+    window.addEventListener("resize", updatePadding);
+
+    // Cleanup function to remove event listener
+    return () => {
+      window.removeEventListener("resize", updatePadding);
+    };
+  }, []);
+
+  const toggleCollapse = () => {
+    setMenuOpen(!menuOpen);
+  };
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
   return (
-    <div className="container-header min-h-12 w-full m-0 p-1">
-      <nav>
-        <ul className="flex flex-wrap justify-between items-center font-semibold text-xl gap-x-5 text-white">
-          <li className="flex justify-between items-center">
-            <Link
-              to="/"
-              className="font-semibold text-2xl gap-1 flex items-center text-black"
+    <>
+      <nav
+        ref={headerRef}
+        className="container-header fixed w-full z-20 top-0 start-0"
+      >
+        <div className="flex flex-wrap items-center justify-between mx-auto p-4">
+          <Link
+            to="/"
+            className="font-semibold text-2xl gap-1 flex items-center text-black"
+          >
+            <img
+              src={logo}
+              alt="logo"
+              className="rounded-full cursor-pointer w-10 h-10 shadow-md"
+            />
+            Code Dragon
+          </Link>
+          <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+            <button
+              type="button"
+              className="text-white bg-teal-700 hover:bg-blue-500 focus:ring-blue-300 rounded-lg font-bold px-4 py-2 text-center"
             >
-              <img
-                src={logo}
-                alt="logo"
-                className="rounded-full cursor-pointer w-10 h-10 shadow-md"
-              />
-              Code Dragon
-            </Link>
-          </li>
-          <li>
-            <Link to="/" className="">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to="/about" className="" href="">
-              About
-            </Link>
-          </li>
-          <li>
-            <a className="" href="">
-              Services
-            </a>
-          </li>
-          <li>
-            <Link to="/">Projects</Link>
-          </li>
-          <li className="">
-            <Link to="/contact" className="flex gap-1 items-center">
-              <button>Contact Me</button>
+              Contact Me
+            </button>
+            <button
+              id="menuToggle"
+              onClick={toggleCollapse}
+              type="button"
+              className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus: ring-2 focus:ring-gray-200"
+              aria-controls="navbar-sticky"
+              aria-expanded="false"
+            >
+              <span className="sr-only">Open main menu</span>
               <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
+                className="w-5 h-5"
+                aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 17 14"
               >
                 <path
-                  fillRule="evenodd"
-                  clipRule="elevation: ,venodd"
-                  d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16ZM12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18Z"
-                  fill="currentColor"
-                />
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M11 0H13V4.06189C12.6724 4.02104 12.3387 4 12 4C11.6613 4 11.3276 4.02104 11 4.06189V0ZM7.0943 5.68018L4.22173 2.80761L2.80752 4.22183L5.6801 7.09441C6.09071 6.56618 6.56608 6.0908 7.0943 5.68018ZM4.06189 11H0V13H4.06189C4.02104 12.6724 4 12.3387 4 12C4 11.6613 4.02104 11.3276 4.06189 11ZM5.6801 16.9056L2.80751 19.7782L4.22173 21.1924L7.0943 18.3198C6.56608 17.9092 6.09071 17.4338 5.6801 16.9056ZM11 19.9381V24H13V19.9381C12.6724 19.979 12.3387 20 12 20C11.6613 20 11.3276 19.979 11 19.9381ZM16.9056 18.3199L19.7781 21.1924L21.1923 19.7782L18.3198 16.9057C17.9092 17.4339 17.4338 17.9093 16.9056 18.3199ZM19.9381 13H24V11H19.9381C19.979 11.3276 20 11.6613 20 12C20 12.3387 19.979 12.6724 19.9381 13ZM18.3198 7.0943L21.1923 4.22183L19.7781 2.80762L16.9056 5.6801C17.4338 6.09071 17.9092 6.56608 18.3198 7.0943Z"
-                  fill="currentColor"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M1 1h15M1 7h15M1 13h15"
                 />
               </svg>
-            </Link>
-          </li>
-        </ul>
+            </button>
+          </div>
+          <div
+            className={`items-center justify-between w-full md:flex md:w-auto md:order-1 ${menuOpen ? "" : "hidden"}`}
+            ref={menuToggle}
+          >
+            <ul className="flex flex-col p-4 md:p-0 mt-4 font-semibold  border-gray-100 rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
+              <li>
+                <Link
+                  to="/"
+                  className="block py-2 px-3 text-white rounded md:p-0"
+                  onClick={closeMenu}
+                >
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/about"
+                  className="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                  onClick={closeMenu}
+                >
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                  onClick={closeMenu}
+                >
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/"
+                  className="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                  onClick={closeMenu}
+                >
+                  Projects
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
-    </div>
+    </>
   );
 };
 
