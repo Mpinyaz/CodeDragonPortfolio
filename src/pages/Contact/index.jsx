@@ -10,7 +10,7 @@ const Contact = () => {
     {
       title: "LinkedIn",
       url: "https://www.linkedin.com/in/elton-mpinyuri-974984134/",
-      icon: <FaInstagramSquare size={25} />,
+      icon: <FaLinkedin size={25} />,
     },
     {
       title: "Github",

@@ -2,6 +2,7 @@ import useDocumentTitle from "../../context/useDocumentTitle";
 import { Experience } from "../../components/Experience";
 import { Education } from "../../components/Education";
 import { Greeter } from "../../components/Greeter";
+import { Services } from "../../components/Services";
 
 import "./Home.css";
 
@@ -18,6 +19,9 @@ function Home() {
         </section>
         <section className="education w-3/4">
           <Education />
+        </section>
+        <section className="services w-3/4">
+          <Services />
         </section>
       </div>
     </>
