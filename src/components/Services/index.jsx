@@ -1,9 +1,32 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Services.css";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import dataJson from "./../../assets/data.json";
 
 export function Services() {
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.from(".serv__item-arrow", {
+      x: (i, el) => 1 - parseFloat(el.getAttribute("data-speed")),
+      scrollTrigger: {
+        trigger: ".serv__list",
+        start: "top bottom",
+        scrub: 1.9,
+      },
+    });
+
+    const gsapSq = gsap.utils.toArray(".services-title__square");
+    gsapSq.forEach((gSq, i) => {
+      const rotat = gsap.from(gSq, { duration: 3, rotation: 720 });
+      ScrollTrigger.create({
+        trigger: gSq,
+        animation: rotat,
+        start: "top bottom",
+        scrub: 1.9,
+      });
+    });
+  }, []);
   return (
     <>
       <div className="services-content">
@@ -15,7 +38,7 @@ export function Services() {
 
         <div className="serv__list text-white font-semibold">
           <a className="serv__item">
-            <span className="serv__item-arrow" data-speed="500">
+            <span className="serv__item-arrow" data-speed="210">
               <img src="src/images/arrow.svg" alt="" />
             </span>
             <div className="serv__item-txt">
@@ -25,7 +48,7 @@ export function Services() {
             </div>
           </a>
           <a className="serv__item">
-            <span className="serv__item-arrow" data-speed="400">
+            <span className="serv__item-arrow" data-speed="140">
               <img src="src/images/arrow.svg" alt="" />
             </span>
             <div className="serv__item-txt">
@@ -35,7 +58,7 @@ export function Services() {
             </div>
           </a>
           <a className="serv__item ">
-            <span className="serv__item-arrow" data-speed="800">
+            <span className="serv__item-arrow" data-speed="70">
               <img src="src/images/arrow.svg" alt="" />
             </span>
             <div className="serv__item-txt">

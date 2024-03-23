@@ -19,7 +19,8 @@ export function Greeter() {
       y: 0,
       stagger: 0.05,
       delay: 0.02,
-      duration: 0.5,
+      duration: 2,
+      ease: "back.out",
     });
     const splitTypes = document.querySelectorAll(".reveal-type");
     splitTypes.forEach((char, i) => {
