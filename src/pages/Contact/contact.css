@@ -7,3 +7,17 @@
   border: 1px solid rgba(255, 255, 255, 0.58);
   color: rgb(30, 0, 128);
 }
+
+.hero__line {
+  transform: scaleX(0);
+  transform-origin: center center;
+}
+
+.banner-text {
+  background: linear-gradient(
+    90deg,
+    rgba(37, 99, 235, 1) 0%,
+    rgba(34, 197, 94, 1) 35%,
+    rgba(79, 70, 229, 1) 100%
+  );
+}

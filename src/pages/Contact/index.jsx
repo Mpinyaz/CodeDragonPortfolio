@@ -4,8 +4,31 @@ import { FaInstagramSquare, FaLinkedin } from "react-icons/fa";
 import { GrGithub } from "react-icons/gr";
 import { BiLogoDevTo } from "react-icons/bi";
 import { LuMail } from "react-icons/lu";
+import { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { animateBanner, revealImage } from "./animations";
 const Contact = () => {
   useDocumentTitle("Contact - 🐲");
+  const Banner = useRef(null);
+  const bannerTextLeft = useRef(null);
+  const bannerTextRight = useRef(null);
+  const bannerTextLine = useRef(null);
+  const bannerImage = useRef(null);
+  gsap.registerPlugin(useGSAP);
+  useGSAP(
+    () => {
+      const gTl = gsap.timeline();
+      gTl
+        .add(revealImage(bannerImage))
+        .add(
+          animateBanner(bannerTextLeft, bannerTextRight, bannerTextLine),
+          "+=0.25"
+        );
+    },
+    { section: Banner }
+  );
+
   const arrLinks = [
     {
       title: "LinkedIn",
@@ -47,6 +70,32 @@ const Contact = () => {
   ));
   return (
     <>
+      <section ref={Banner} className="mb-2 p-2 gap-2">
+        <div className="banner flex justify-center items-center">
+          <img
+            src="src/images/fierceDragon.jpeg"
+            ref={bannerImage}
+            alt="banner-image"
+            className="rounded-full"
+            height="200px"
+            width="200px"
+          />
+        </div>
+        <div className="mx-3">
+          <h1 className="flex items-center text-4xl font-semibold">
+            <span ref={bannerTextLeft} className="text-white">
+              Code
+            </span>
+            <span
+              ref={bannerTextLine}
+              className="hero__line inline-block banner-text h-2 w-full m-2 rounded-lg"
+            ></span>
+            <span ref={bannerTextRight} className="text-white">
+              Dragon
+            </span>
+          </h1>
+        </div>
+      </section>
       <section className="mt-8 flex flex-col md:flex-row  py-1 gap-3 px-3">
         <div
           id="contentlinks"
