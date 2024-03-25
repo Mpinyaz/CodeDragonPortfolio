@@ -35,7 +35,10 @@ export function Education() {
 
   return (
     <>
-      <h2 className="text-3xl font-bold text-white mb-2">Education</h2>
+      <h2 className="section-title text-white font-bold">
+        Education
+        <span className="section-title__square"></span>
+      </h2>
       <div className="timeline relative max-w-7xl card">{edu}</div>
     </>
   );

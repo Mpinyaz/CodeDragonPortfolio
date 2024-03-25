@@ -40,7 +40,10 @@ export function Experience() {
 
   return (
     <>
-      <h2 className="text-3xl font-bold text-white mb-2">Experience</h2>
+      <h2 className="section-title text-white font-bold">
+        Experience
+        <span className="section-title__square"></span>
+      </h2>
       <div className="timeline relative max-w-7xl card">{exp}</div>
     </>
   );
