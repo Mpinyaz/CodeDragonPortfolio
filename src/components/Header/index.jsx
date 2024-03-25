@@ -2,12 +2,27 @@ import { useRef, useState, useEffect } from "react";
 import logo from "../../images/dragon.png";
 import "./Header.css";
 import { Link } from "react-router-dom";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import { fadeIn, fadeOut } from "./animation";
 
 const Header = () => {
   const menuToggle = useRef(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const headerRef = useRef(null);
+  const homeHover = useRef(null);
+  const initialHomeText = useRef(null);
+  const finalHomeText = useRef(null);
+  const [isHovered, setIsHovered] = useState(null);
+  gsap.registerPlugin(useGSAP);
 
+  useGSAP(
+    () => {
+      fadeIn(initialHomeText, finalHomeText, homeHover);
+      fadeOut(initialHomeText, finalHomeText, homeHover);
+    },
+    { scope: headerRef }
+  );
   useEffect(() => {
     // Dynamically adjust padding of content area based on header height
     const updatePadding = () => {
@@ -31,6 +46,35 @@ const Header = () => {
   const closeMenu = () => {
     setMenuOpen(false);
   };
+  const handleMouseEnter = () => {
+    const hoverElement = finalHomeText.current;
+    const initialElement = initialHomeText.current;
+
+    if (hoverElement && initialElement) {
+      fadeIn(hoverElement, initialElement, homeHover);
+      setIsHovered(true);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    const hoverElement = finalHomeText.current;
+    const initialElement = initialHomeText.current;
+
+    if (hoverElement && initialElement) {
+      fadeOut(hoverElement, initialElement, homeHover);
+      setIsHovered(false);
+    }
+  };
+
+  const handleClick = () => {
+    if (isHovered) {
+      window.location.href = "/";
+    }
+  };
+  const handleContactMe = () => {
+    window.location.href = "/contact";
+  };
+
   return (
     <>
       <nav
@@ -40,19 +84,35 @@ const Header = () => {
         <div className="flex flex-wrap items-center justify-between mx-auto p-4">
           <Link
             to="/"
-            className="font-semibold text-2xl gap-1 flex items-center text-black"
+            className="font-semibold gap-1 flex items-center"
+            ref={homeHover}
+            onClick={handleClick}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
           >
             <img
               src={logo}
               alt="logo"
               className="rounded-full cursor-pointer w-10 h-10 shadow-md"
             />
-            Code Dragon
+            <div className="homeBannerText">
+              <span ref={initialHomeText} className="text-white">
+                CodeDragon
+              </span>
+              <span
+                ref={finalHomeText}
+                className="text-green-600"
+                aria-hidden="true"
+              >
+                CodeDragon
+              </span>
+            </div>
           </Link>
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
             <button
               type="button"
               className="text-white bg-teal-700 hover:bg-blue-500 focus:ring-blue-300 rounded-lg font-bold px-4 py-2 text-center"
+              onClick={handleContactMe}
             >
               Contact Me
             </button>
@@ -83,7 +143,9 @@ const Header = () => {
             </button>
           </div>
           <div
-            className={`items-center justify-between w-full md:flex md:w-auto md:order-1 ${menuOpen ? "" : "hidden"}`}
+            className={`items-center justify-between w-full md:flex md:w-auto md:order-1 ${
+              menuOpen ? "" : "hidden"
+            }`}
             ref={menuToggle}
           >
             <ul className="flex flex-col p-4 md:p-0 mt-4 font-semibold  border-gray-100 rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">

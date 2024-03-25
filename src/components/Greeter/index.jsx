@@ -3,8 +3,7 @@ import { ReactLenis } from "@studio-freight/react-lenis";
 import { gsap } from "gsap";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
-import { greeterAnimation } from "./animations";
-import { descAnimationScroll } from "./animations";
+import { greeterAnimation, descAnimationScroll } from "./animations";
 export function Greeter() {
   const greeterContainer = useRef(null);
   const greeter = useRef(null);
