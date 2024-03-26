@@ -50,7 +50,11 @@ const Contact = () => {
       url: "https://www.instagram.com/mpinyaz/",
       icon: <FaInstagramSquare size={25} />,
     },
-    { title: "Email Me", url: "", icon: <LuMail size={23} /> },
+    {
+      title: "Email Me",
+      url: "mailto:ebmpinyuri@gmail.com?subject=Lets%20chat",
+      icon: <LuMail size={23} />,
+    },
   ];
   const linkList = arrLinks.map((link) => (
     <div
