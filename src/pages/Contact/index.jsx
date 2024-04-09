@@ -1,4 +1,5 @@
 import "./contact.css";
+import { Email } from "../../components/Email";
 import useDocumentTitle from "../../context/useDocumentTitle";
 import { FaInstagramSquare, FaLinkedin } from "react-icons/fa";
 import { GrGithub } from "react-icons/gr";
@@ -23,10 +24,10 @@ const Contact = () => {
         .add(revealImage(bannerImage))
         .add(
           animateBanner(bannerTextLeft, bannerTextRight, bannerTextLine),
-          "+=0.25"
+          "+=0.25",
         );
     },
-    { section: Banner }
+    { section: Banner },
   );
 
   const arrLinks = [
@@ -121,34 +122,7 @@ const Contact = () => {
           <h1 className="text-5xl font-semibold inline-block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 mb-2">
             Send me mail
           </h1>
-          <form className="flex flex-col justify-center gap-y-3">
-            <label htmlFor="name">Name</label>
-            <input
-              type="text"
-              placeholder="Your name"
-              className="border-2 border-indigo-400 p-2 rounded-lg"
-            />
-            <label htmlFor="email">Email</label>
-            <input
-              type="email"
-              className="border-2 border-indigo-400 p-2 rounded-lg"
-              placeholder="Your email"
-            />
-            <label htmlFor="message">Message</label>
-            <textarea
-              name="message"
-              id="message"
-              rows="5"
-              placeholder="Your message"
-              className="border-2 border-red-200 rounded-lg p-2"
-            ></textarea>
-            <button
-              type="submit"
-              className="mt-2 w-full h-10 bg-purple-200  shadow-link-shadow rounded-full gap-x-2 px-4 py-2 flex flex-row items-center justify-center font-semibold"
-            >
-              Send Message
-            </button>
-          </form>
+          <Email />
         </div>
       </section>
     </>

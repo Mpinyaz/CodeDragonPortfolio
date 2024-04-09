@@ -22,7 +22,7 @@ export function Services() {
       gTl.add(animateArrow());
       animateServiceText();
     },
-    { section: serv }
+    { section: serv },
   );
 
   const handleCollapse = (item, ref) => {
