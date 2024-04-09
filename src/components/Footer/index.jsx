@@ -1,6 +1,7 @@
 import "./Footer.css";
 import { FaInstagramSquare, FaLinkedin } from "react-icons/fa";
 import { GrGithub } from "react-icons/gr";
+import { ThemeToggler } from "../ThemeToggler";
 const Footer = () => {
   return (
     <div className="container-footer items-center flex mt-auto w-full px-2 py-3 justify-between text-base font-semibold">
@@ -28,7 +29,11 @@ const Footer = () => {
         </a>
         <a id="instagram" href="https://www.instagram.com/mpinyaz/">
           <FaInstagramSquare size={25} style={{ fill: "white" }} />
-        </a></div>
+        </a>
+      </div>
+      <div>
+        <ThemeToggler />
+      </div>
     </div>
   );
 };
