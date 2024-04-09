@@ -1,0 +1,83 @@
+.theme-label {
+  width: 6.25rem;
+  height: 2.5rem;
+  background: #ebebeb;
+  box-shadow:
+    inset 0px 5px 15px rgba(0, 0, 0, 0.4),
+    inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+}
+
+.theme-label:after {
+  content: "";
+  height: 2.25rem;
+  width: 2.25rem;
+  position: absolute;
+  top: 0.15rem;
+  left: 0.2rem;
+  background: linear-gradient(180deg, #ffcc89, #d8860b);
+  border-radius: 50%;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+#darkmode-toggle:checked + .theme-label {
+  background: #242424;
+  content: "";
+}
+
+.theme-label:before {
+  width: 6.25rem;
+  height: 2.5rem;
+  content: "LIGHT";
+  position: absolute;
+  right: 0.5rem;
+  top: 20%;
+  color: #32205b;
+}
+
+#darkmode-toggle:checked + .theme-label:after {
+  left: 6rem;
+  transform: translateX(-100%);
+  background: linear-gradient(180deg, #777, #3a3a3a);
+}
+
+#darkmode-toggle:checked + .theme-label:before {
+  content: "DARK";
+  left: -2.9rem;
+  color: #fff;
+}
+
+.theme-label,
+.theme-label:after {
+  transition: 0.4s;
+}
+
+.theme-label:active:after {
+  width: 4.5rem;
+}
+
+.theme-label svg {
+  position: absolute;
+  height: 1.5rem;
+  width: 1.5rem;
+  z-index: 100;
+}
+
+.theme-label svg.sun {
+  left: 0.5rem;
+  top: 0.5rem;
+  fill: #fff;
+}
+
+.theme-label svg.moon {
+  left: 4.1rem;
+  top: 0.5rem;
+  fill: #fff;
+}
+
+#darkmode-toggle:checked + .theme-label svg.moon {
+  display: inherit;
+}
+
+#darkmode-toggle:checked + .theme-label svg.sun {
+  display: none;
+}

@@ -1,7 +1,7 @@
 import "./Footer.css";
 import { FaInstagramSquare, FaLinkedin } from "react-icons/fa";
 import { GrGithub } from "react-icons/gr";
-import { ThemeToggler } from "../ThemeToggler";
+import { ThemeBtn } from "../ThemeBtn";
 const Footer = () => {
   return (
     <div className="container-footer items-center flex mt-auto w-full px-2 py-3 justify-between text-base font-semibold">
@@ -32,7 +32,7 @@ const Footer = () => {
         </a>
       </div>
       <div>
-        <ThemeToggler />
+        <ThemeBtn />
       </div>
     </div>
   );
