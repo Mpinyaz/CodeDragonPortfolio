@@ -5,11 +5,13 @@ import NoMatch from "../components/Error404";
 import About from "../pages/About/";
 const Home = lazy(() => import("../pages/Home"));
 const Contact = lazy(() => import("../pages/Contact"));
+const Skills = lazy(() => import("../pages/Skills"));
 
 export const PathConstants = {
   HOME: "/",
   ABOUT: "/about",
   CONTACT: "/contact",
+  SKILLS: "/skills",
 };
 
 const routes = [
@@ -21,6 +23,7 @@ const routes = [
       { path: PathConstants.HOME, element: <Home /> },
       { path: PathConstants.ABOUT, element: <About /> },
       { path: PathConstants.CONTACT, element: <Contact /> },
+      { path: PathConstants.SKILLS, element: <Skills /> },
     ],
   },
 ];

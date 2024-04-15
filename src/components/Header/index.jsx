@@ -21,7 +21,7 @@ const Header = () => {
       fadeIn(initialHomeText, finalHomeText, homeHover);
       fadeOut(initialHomeText, finalHomeText, homeHover);
     },
-    { scope: headerRef }
+    { scope: headerRef },
   );
   useEffect(() => {
     // Dynamically adjust padding of content area based on header height
@@ -169,10 +169,11 @@ const Header = () => {
               </li>
               <li>
                 <Link
+                  to="/skills"
                   className="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
                   onClick={closeMenu}
                 >
-                  Services
+                  Skills
                 </Link>
               </li>
               <li>

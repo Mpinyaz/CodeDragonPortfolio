@@ -1,0 +1,16 @@
+.skills h1,
+p {
+  transform: translate(-50%, -50%);
+}
+
+.skills h1 {
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+}
+.skills img {
+  filter: brightness(40%);
+  transition: 0.9s ease-in-out;
+}
+
+.skills img:hover {
+  filter: brightness(100%);
+}
