@@ -21,12 +21,14 @@
   border-radius: 1rem;
   font-weight: semi-bold;
   letter-spacing: 0.1ch;
-  background: var(--abtbg);
+  background: orange;
   border: 4px solid transparent;
   box-shadow: 0 1px hsl(0 0% 100% / 0.15) inset;
   cursor: pointer;
-  background: linear-gradient(var(--abtbg), var(--abtbg)) padding-box,
-    var(--abtglow), linear-gradient(black, black) border-box;
+  background:
+    linear-gradient(var(--abtbg), var(--abtbg)) padding-box,
+    var(--abtglow),
+    linear-gradient(black, black) border-box;
   transition: background-size 0.24s;
   touch-action: none;
   position: relative;
@@ -43,6 +45,9 @@
   z-index: 2;
   border-radius: 1rem;
 }
+.about-btn > button.active:before {
+  background: orange;
+}
 
 .about-btn > button > span {
   background: var(--abtglow), white;
@@ -54,7 +59,9 @@
   position: relative;
   inset: 0;
 }
-
+.about-btn.active > button {
+  background-color: orange;
+}
 :root:has(.about-btn > button:active) {
   --abtsize: 300px;
 }

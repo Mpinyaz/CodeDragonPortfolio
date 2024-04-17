@@ -2,8 +2,6 @@ import { useRef, useState, useEffect } from "react";
 import logo from "../../images/dragon.png";
 import "./Header.css";
 import { Link } from "react-router-dom";
-import { gsap } from "gsap";
-import { useGSAP } from "@gsap/react";
 import { fadeIn, fadeOut } from "./animation";
 
 const Header = () => {
@@ -13,16 +11,7 @@ const Header = () => {
   const homeHover = useRef(null);
   const initialHomeText = useRef(null);
   const finalHomeText = useRef(null);
-  const [isHovered, setIsHovered] = useState(null);
-  gsap.registerPlugin(useGSAP);
 
-  useGSAP(
-    () => {
-      fadeIn(initialHomeText, finalHomeText, homeHover);
-      fadeOut(initialHomeText, finalHomeText, homeHover);
-    },
-    { scope: headerRef },
-  );
   useEffect(() => {
     // Dynamically adjust padding of content area based on header height
     const updatePadding = () => {
@@ -50,26 +39,18 @@ const Header = () => {
     const hoverElement = finalHomeText.current;
     const initialElement = initialHomeText.current;
 
-    if (hoverElement && initialElement) {
-      fadeIn(hoverElement, initialElement, homeHover);
-      setIsHovered(true);
-    }
+    fadeIn(hoverElement, initialElement, homeHover);
   };
 
   const handleMouseLeave = () => {
     const hoverElement = finalHomeText.current;
     const initialElement = initialHomeText.current;
 
-    if (hoverElement && initialElement) {
-      fadeOut(hoverElement, initialElement, homeHover);
-      setIsHovered(false);
-    }
+    fadeOut(hoverElement, initialElement, homeHover);
   };
 
   const handleClick = () => {
-    if (isHovered) {
-      window.location.href = "/";
-    }
+    window.location.href = "/";
   };
   const handleContactMe = () => {
     window.location.href = "/contact";
@@ -87,8 +68,8 @@ const Header = () => {
             className="font-semibold gap-1 flex items-center"
             ref={homeHover}
             onClick={handleClick}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
+            onMouseOver={handleMouseEnter}
+            onMouseOut={handleMouseLeave}
           >
             <img
               src={logo}
