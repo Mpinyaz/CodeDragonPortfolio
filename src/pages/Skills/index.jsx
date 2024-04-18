@@ -1,12 +1,13 @@
 import React from "react";
 import { SkillsCollage } from "../../components/Skills";
 import "./Skills.css";
+import Carousel from "../../components/Carousel";
 
 function Skills() {
   return (
     <>
-      <div className="mt-5 flex flex-col items-center">
-        <section className="text-white flex flex-col lg:flex-row mx-60 mb-6 items-start lg:items-start gap-4">
+      <div className="card mt-5 flex flex-col items-center mx-16 p-2 my-6">
+        <section className="text-white flex flex-col xl:flex-row mx-60 mb-6 items-start lg:items-start gap-4">
           <h1 className="basis-1/2 text-5xl font-extrabold">
             {"CodeDragon - Where Coding"}
             <br />
@@ -29,6 +30,12 @@ function Skills() {
               </h1>
             </span>
           </div>
+        </section>
+        <section className="flex flex-col lg:flex-row lg:items-start items-center box-border m-0 p-2 my-5 justify-start space-x-3 w-auto">
+          <h1 className="font-extrabold text-white text-4xl text-start">
+            Tooling:
+          </h1>
+          <Carousel />
         </section>
         <SkillsCollage />
       </div>
