@@ -46,7 +46,7 @@
   border-radius: 1rem;
 }
 .about-btn > button.active:before {
-  background: orange;
+  background: rgb(15, 118, 110);
 }
 
 .about-btn > button > span {

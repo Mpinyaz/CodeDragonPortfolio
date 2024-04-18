@@ -1,0 +1,13 @@
+.blinking-cursor span {
+  animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}

@@ -82,7 +82,7 @@ const Header = () => {
               </span>
               <span
                 ref={finalHomeText}
-                className="text-green-600"
+                className="font-semibold inline-block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400"
                 aria-hidden="true"
               >
                 CodeDragon

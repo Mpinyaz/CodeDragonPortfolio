@@ -6,11 +6,11 @@ p {
 .skills h1 {
   font-size: clamp(1.5rem, 5vw, 2.5rem);
 }
-.skills img {
+.skills {
   filter: brightness(40%);
   transition: 0.9s ease-in-out;
 }
 
-.skills img:hover {
+.skills:hover {
   filter: brightness(100%);
 }
