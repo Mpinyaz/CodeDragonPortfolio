@@ -14,19 +14,19 @@
   pointer-events: none;
 }
 
-.homeBannerText a {
+.homeBannerText .banner {
   position: relative;
   text-decoration: none;
   pointer-events: all;
   overflow: hidden;
 }
 
-.homeBannerText a div,
-.homeBannerText a::after {
+.homeBannerText .banner div,
+.homeBannerText .banner::after {
   transition: transform 0.85s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-.homeBannerText a::after {
+.homeBannerText .banner::after {
   content: attr(data-txt);
   position: absolute;
   top: 100%;
@@ -52,7 +52,7 @@
   -moz-text-fill-color: transparent;
 }
 
-.homeBannerText a:hover div,
-.homeBannerText a:hover::after {
+.homeBannerText .banner:hover div,
+.homeBannerText .banner:hover::after {
   transform: translateY(-100%);
 }

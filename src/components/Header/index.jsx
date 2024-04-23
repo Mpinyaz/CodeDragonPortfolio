@@ -57,11 +57,11 @@ const Header = () => {
               className="rounded-full cursor-pointer w-10 h-10 shadow-md"
             />
             <div className="homeBannerText">
-              <a data-txt="CodeDragon" className="text-white">
-                <div className="text-white font-extrabold text-2xl">
+              <div data-txt="CodeDragon" className="banner text-white">
+                <div className=" text-white font-extrabold text-2xl">
                   CodeDragon
                 </div>
-              </a>
+              </div>
             </div>
           </Link>
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">

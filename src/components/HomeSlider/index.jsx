@@ -1,15 +1,15 @@
 import scrollTrigger from "gsap/ScrollTrigger";
 import gsap from "gsap";
-gsap.registerPlugin(scrollTrigger);
 import { useLayoutEffect, useRef } from "react";
 import "./HomeSlider.css";
+
 const Homeslider = () => {
   const component = useRef();
   const slider = useRef();
+  gsap.registerPlugin(scrollTrigger);
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
       let panels = gsap.utils.toArray(".slides div");
-      console.log(slider.current.offsetWidth);
       gsap.to(panels, {
         xPercent: -100 * (panels.length - 1),
         ease: "none",
