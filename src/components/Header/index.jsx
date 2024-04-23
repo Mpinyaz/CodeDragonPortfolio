@@ -68,7 +68,7 @@ const Header = () => {
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse ">
             <motion.button
               type="button"
-              className="rounded-lg  px-4 py-2 relative radial-gradient bg-teal-500"
+              className="rounded-lg  px-4 py-2 relative radial-gradient"
               onClick={handleContactMe}
               initial={{ "--btnx": "100%" }}
               animate={{ "--btnx": "-100%" }}
@@ -91,7 +91,7 @@ const Header = () => {
               <span className="text-neutral-100 tracking-wide font-bold h-full w-full block relative linear-mask">
                 Contact Me
               </span>
-              <span className="block absolute inset-0 rounded-md p-px linear-overlay"></span>
+              <span className="block absolute inset-0 rounded-md p-[2px] linear-overlay"></span>
             </motion.button>
             <button
               id="menuToggle"
