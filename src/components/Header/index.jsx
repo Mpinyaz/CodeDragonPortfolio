@@ -1,4 +1,5 @@
 import { useRef, useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import logo from "../../images/dragon.png";
 import "./Header.css";
 import { Link } from "react-router-dom";
@@ -64,14 +65,34 @@ const Header = () => {
               </div>
             </div>
           </Link>
-          <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-            <button
+          <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse ">
+            <motion.button
               type="button"
-              className="text-white bg-teal-700 hover:bg-blue-500 focus:ring-blue-300 rounded-lg font-bold px-4 py-2 text-center"
+              className="rounded-lg  px-4 py-2 relative radial-gradient bg-teal-500"
               onClick={handleContactMe}
+              initial={{ "--btnx": "100%" }}
+              animate={{ "--btnx": "-100%" }}
+              transition={{
+                repeat: Infinity,
+                repeatType: "loop",
+                repeatDelay: 5,
+                type: "spring",
+                stiffness: 20,
+                damping: 15,
+                mass: 2,
+                scale: {
+                  type: "spring",
+                  stiffness: 10,
+                  damping: 5,
+                  mass: 0.1,
+                },
+              }}
             >
-              Contact Me
-            </button>
+              <span className="text-neutral-100 tracking-wide font-bold h-full w-full block relative linear-mask">
+                Contact Me
+              </span>
+              <span className="block absolute inset-0 rounded-md p-px linear-overlay"></span>
+            </motion.button>
             <button
               id="menuToggle"
               onClick={toggleCollapse}
