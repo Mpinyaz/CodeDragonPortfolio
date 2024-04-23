@@ -2,15 +2,11 @@ import { useRef, useState, useEffect } from "react";
 import logo from "../../images/dragon.png";
 import "./Header.css";
 import { Link } from "react-router-dom";
-import { fadeIn, fadeOut } from "./animation";
 
 const Header = () => {
   const menuToggle = useRef(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const headerRef = useRef(null);
-  const homeHover = useRef(null);
-  const initialHomeText = useRef(null);
-  const finalHomeText = useRef(null);
 
   useEffect(() => {
     // Dynamically adjust padding of content area based on header height
@@ -35,19 +31,6 @@ const Header = () => {
   const closeMenu = () => {
     setMenuOpen(false);
   };
-  const handleMouseEnter = () => {
-    const hoverElement = finalHomeText.current;
-    const initialElement = initialHomeText.current;
-
-    fadeIn(hoverElement, initialElement, homeHover);
-  };
-
-  const handleMouseLeave = () => {
-    const hoverElement = finalHomeText.current;
-    const initialElement = initialHomeText.current;
-
-    fadeOut(hoverElement, initialElement, homeHover);
-  };
 
   const handleClick = () => {
     window.location.href = "/";
@@ -66,10 +49,7 @@ const Header = () => {
           <Link
             to="/"
             className="font-semibold gap-1 flex items-center"
-            ref={homeHover}
             onClick={handleClick}
-            onMouseOver={handleMouseEnter}
-            onMouseOut={handleMouseLeave}
           >
             <img
               src={logo}
@@ -77,16 +57,11 @@ const Header = () => {
               className="rounded-full cursor-pointer w-10 h-10 shadow-md"
             />
             <div className="homeBannerText">
-              <span ref={initialHomeText} className="text-white">
-                CodeDragon
-              </span>
-              <span
-                ref={finalHomeText}
-                className="font-semibold inline-block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400"
-                aria-hidden="true"
-              >
-                CodeDragon
-              </span>
+              <a data-txt="CodeDragon" className="text-white">
+                <div className="text-white font-extrabold text-2xl">
+                  CodeDragon
+                </div>
+              </a>
             </div>
           </Link>
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
@@ -159,11 +134,11 @@ const Header = () => {
               </li>
               <li>
                 <Link
-                  to="/"
+                  to="/experience"
                   className="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
                   onClick={closeMenu}
                 >
-                  Projects
+                  Experience
                 </Link>
               </li>
             </ul>

@@ -9,12 +9,50 @@
 }
 
 .homeBannerText {
-  display: grid;
-  height: 50px;
-  font-size: 2rem;
-  grid-template-rows: 22px;
-  align-items: center;
-  line-height: 1.7;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+.homeBannerText a {
+  position: relative;
+  text-decoration: none;
+  pointer-events: all;
   overflow: hidden;
-  padding: 1rem;
+}
+
+.homeBannerText a div,
+.homeBannerText a::after {
+  transition: transform 0.85s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.homeBannerText a::after {
+  content: attr(data-txt);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-weight: 800;
+  background-color: teal;
+  font-size: 1.5rem; /* 24px */
+  line-height: 2rem; /* 32px */
+  background-image: linear-gradient(
+    90deg,
+    rgba(37, 99, 235, 1) 0%,
+    rgba(34, 197, 94, 1) 35%,
+    rgba(79, 70, 229, 1) 100%
+  );
+  background-size: 100%;
+  background-repeat: repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+.homeBannerText a:hover div,
+.homeBannerText a:hover::after {
+  transform: translateY(-100%);
 }
