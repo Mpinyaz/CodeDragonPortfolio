@@ -64,13 +64,7 @@ const About = () => {
                         ease: "cubic",
                 });
         }
-        // document.addEventListener("DOMContentLoaded", () => {
-        //         splitTextIntoSpans(".abt-copy h1");
-        //         initializeCards();
-        //
-        //         gsap.set(".abt-card h1 span", { y: -200, opacity: 0 });
-        //         gsap.set(".abt-slider .abt-card:last-child h1 span", { y: 0 });
-        // });
+
         useEffect(() => {
                 splitTextIntoSpans(".abt-copy h1");
                 initializeCards();
@@ -79,53 +73,40 @@ const About = () => {
                 gsap.set(".abt-slider .abt-card:last-child h1 span", { y: 0 });
         }, []);
 
-        useEffect(() => {
-                const handleClick = () => {
-                        if (isAnimating) return;
-                        setIsAnimating(true);
-
-                        const cards = Array.from(document.querySelectorAll(".abt-card"));
-                        const slider = document.querySelector(".abt-slider");
-                        const lastCard = cards.pop();
-                        const nextCard = cards[cards.length - 1];
-
-                        gsap.to(lastCard.querySelectorAll("h1 span"), {
-                                duration: 0.75,
-                                y: 200,
-                                stagger: 0.1,
-                                ease: "cubic",
-                        });
-
-                        gsap.from(lastCard.querySelector("p"), { opacity: 0.75, duration: 1 });
-
-                        gsap.to(lastCard, {
-                                y: "+=150%",
-                                duration: 0.75,
-                                ease: "cubic",
-                                onComplete: () => {
-                                        slider.prepend(lastCard);
-                                        initializeCards(); // Assuming this function is defined elsewhere
-                                        gsap.set(".abt-card h1 span", { y: -200 });
-                                        setTimeout(() => {
-                                                setIsAnimating(false);
-                                        }, 1000);
-                                },
-                        });
-
-                        gsap.to(nextCard.querySelectorAll("h1 span"), {
-                                y: 0,
-                                duration: 1,
-                                stagger: 0.05,
-                                ease: "cubic",
-                        });
-                };
-
-                document.addEventListener("click", handleClick);
-
-                return () => {
-                        document.removeEventListener("click", handleClick);
-                };
-        }, [isAnimating]);
+        document.addEventListener("click", () => {
+                if (isAnimating) return;
+                setIsAnimating(true);
+                let cards = Array.from(document.querySelectorAll(".abt-card"));
+                let slider = document.querySelector(".abt-slider");
+                let lastCard = cards.pop();
+                let nextCard = cards[cards.length - 1];
+                gsap.to(lastCard.querySelectorAll("h1 span"), {
+                        duration: 0.75,
+                        y: 200,
+                        stagger: 0.1,
+                        ease: "cubic",
+                });
+                gsap.from(lastCard.querySelector("p"), { opacity: 0.75, duration: 1 });
+                gsap.to(lastCard, {
+                        y: "+=150%",
+                        duration: 0.75,
+                        ease: "cubic",
+                        onComplete: () => {
+                                slider.prepend(lastCard);
+                                initializeCards();
+                                gsap.set(".abt-card h1 span", { y: -200 });
+                                setTimeout(() => {
+                                        setIsAnimating(false);
+                                }, 1000);
+                        },
+                });
+                gsap.to(nextCard.querySelectorAll("h1 span"), {
+                        y: 0,
+                        duration: 1,
+                        stagger: 0.05,
+                        ease: "cubic",
+                });
+        });
         return (
                 <>
                         <div className="w-full overflow-hidden" ref={vantaRef}>
@@ -134,24 +115,26 @@ const About = () => {
                                                 <div className="abt-card">
                                                         <img src="src/images/trading-graph.jpeg" alt="Profile Pic" />
                                                         <div className="abt-copy flex flex-col items-center p-5">
-                                                                <h1 className="text-fuchsia-600 font-spaceGrotesk font-extrabold text-center relative text-5xl uppercase">
+                                                                <h1 className="text-fuchsia-600 font-spaceGrotesk font-extrabold text-center   uppercase">
                                                                         Finance
                                                                 </h1>
-                                                                <p className=" w-1/2 card font-spaceGrotesk text-center relative text-2xl italic">
-                                                                        Software developer
-                                                                        <br />
-                                                                        Data Analyst
+                                                                <p className=" w-3/4 card font-spaceGrotesk text-center   italic">
+                                                                        Providing expertise in financial modeling, budgeting, and
+                                                                        forecasting, contributing to strategic decision-making with
+                                                                        insightful analysis and reporting.
                                                                 </p>
                                                         </div>
                                                 </div>
-
                                                 <div className="abt-card">
                                                         <img src="src/assets/purp-planet.jpeg" alt="" />
                                                         <div className="abt-copy flex flex-col items-center p-6">
-                                                                <h1 className="font-spaceGrotesk  font-extrabold text-teal-600 text-center relative text-5xl uppercase">
-                                                                        Web Designer
+                                                                <h1 className="font-spaceGrotesk  font-extrabold text-teal-600 text-center   uppercase">
+                                                                        Web
                                                                 </h1>
-                                                                <p className="w-3/4 card font-spaceGrotesk text-center relative text-2xl italic">
+                                                                <h1 className="font-spaceGrotesk  font-extrabold text-pink-600 text-center   uppercase">
+                                                                        Designer
+                                                                </h1>
+                                                                <p className="w-3/4 card font-spaceGrotesk text-center   italic">
                                                                         I'm probably not the typical designer positioned behind an
                                                                         Illustrator artboard adjusting pixels, but I design. Immersed
                                                                         in stylesheets tweaking font sizes and contemplating layouts
@@ -161,28 +144,34 @@ const About = () => {
                                                         </div>
                                                 </div>
                                                 <div className="abt-card">
+                                                        <img src="src/assets/Elton.jpeg" alt="Profile Pic" />
+                                                        <div className="abt-copy flex flex-col items-center p-5">
+                                                                <h1 className="text-pink-600 font-spaceGrotesk font-extrabold text-center   uppercase">
+                                                                        Elton
+                                                                </h1>
+                                                                <h1 className="text-fuchsia-600 font-spaceGrotesk font-extrabold text-center   uppercase">
+                                                                        Mpinyuri
+                                                                </h1>
+                                                                <p className=" w-1/2 card font-spaceGrotesk text-center   italic">
+                                                                        Software Developer
+                                                                        <br />
+                                                                        Data Analyst
+                                                                </p>
+                                                        </div>
+                                                </div>{" "}
+                                                <div className="abt-card">
                                                         <img src="src/assets/waves.jpeg" alt="" />
                                                         <div className="abt-copy flex flex-col items-center p-5">
-                                                                <h1 className="text-red-600 font-spaceGrotesk font-extrabold text-center relative text-5xl uppercase">
-                                                                        Frontend Developer.
+                                                                <h1 className="text-pink-600 font-spaceGrotesk font-extrabold text-center   uppercase">
+                                                                        Frontend
                                                                 </h1>
-                                                                <p className=" w-1/2 card font-spaceGrotesk text-center relative text-2xl italic card">
+                                                                <h1 className="text-red-600 font-spaceGrotesk font-extrabold text-center  uppercase">
+                                                                        Developer
+                                                                </h1>
+                                                                <p className=" w-3/4 card font-spaceGrotesk text-center italic card">
                                                                         I like to craft solid and scalable frontend products with
                                                                         <br />
                                                                         great user experiences.
-                                                                </p>
-                                                        </div>
-                                                </div>
-                                                <div className="abt-card">
-                                                        <img src="src/assets/Elton.jpeg" alt="Profile Pic" />
-                                                        <div className="abt-copy flex flex-col items-center p-5">
-                                                                <h1 className="text-fuchsia-600 font-spaceGrotesk font-extrabold text-center relative text-5xl uppercase">
-                                                                        Elton Mpinyuri
-                                                                </h1>
-                                                                <p className=" w-1/2 card font-spaceGrotesk text-center relative text-2xl italic">
-                                                                        Software developer
-                                                                        <br />
-                                                                        Data Analyst
                                                                 </p>
                                                         </div>
                                                 </div>
