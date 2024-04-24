@@ -68,7 +68,7 @@ const Header = () => {
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse ">
             <motion.button
               type="button"
-              className="rounded-lg  px-4 py-2 relative radial-gradient"
+              className="rounded-lg  px-4 py-2 relative radial-gradient-navbar"
               onClick={handleContactMe}
               initial={{ "--btnx": "100%" }}
               animate={{ "--btnx": "-100%" }}
