@@ -68,7 +68,7 @@ export const Email = () => {
           <textarea
             name="message"
             id="message"
-            className="form__input-text overflow-hidden"
+            className="form__input-text overflow-hidden mt-2"
             required
           ></textarea>
           <label htmlFor="nameCompany" className="form__label">
