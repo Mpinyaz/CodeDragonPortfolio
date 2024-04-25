@@ -9,6 +9,7 @@ import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
 import "./Home.css";
 import SmoothScrolling from "../../utils/SmoothScrolling";
+import CustomLoader from "../../components/Loader";
 
 function Home() {
   useDocumentTitle("Code Dragon");
@@ -36,6 +37,7 @@ function Home() {
           <section className="education w-3/4">
             <Education />
           </section>
+          <CustomLoader/>
         </div>
       </SmoothScrolling>
     </>

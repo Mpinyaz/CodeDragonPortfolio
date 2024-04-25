@@ -3,7 +3,9 @@ import "./Loader.css";
 const CustomLoader = () => {
   return (
     <div className="relative">
-    <h1 className="text-white text-2xl font-extrabold absolute top-1/2 left-1/2 centered uppercase">Loading</h1>
+      <h1 className="text-white text-2xl font-extrabold absolute top-1/2 left-1/2 centered uppercase blinking-cursor-loader">
+        Loading
+      </h1>
       <div className="preloader">
         <div className="preloader__wrapp loader">
           <div className="preloader__one one bd_color"></div>

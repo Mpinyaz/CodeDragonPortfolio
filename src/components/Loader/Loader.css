@@ -113,3 +113,16 @@ body{
 .centered {
   transform: translate(-50%, -50%);
 }
+.blinking-cursor-loader {
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
