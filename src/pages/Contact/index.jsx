@@ -110,7 +110,7 @@ const Contact = () => {
             <h1 className="text-5xl font-semibold inline-block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 mb-2">
               {"Let's Connect"}
             </h1>
-            <p className="p-2 mt-4">
+            <p className="p-2 mt-4 text-white">
               {
                 "I'm always open to new opportunities and collaborations. If you have a project in mind or want to discuss how I can contribute to your this team, please don't hesitate to reach out. You can find my contact information on this site."
               }

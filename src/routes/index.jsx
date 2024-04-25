@@ -1,4 +1,6 @@
 import BaseLayout from "../layouts/BaseLayout";
+import HomeLayout from "../layouts/homeLayout";
+
 import { lazy } from "react";
 import NoMatch from "../components/Error404";
 
@@ -18,11 +20,14 @@ export const PathConstants = {
 
 const routes = [
   {
-    path: PathConstants.HOME,
+    element: <HomeLayout />,
+    children: [{ path: PathConstants.HOME, element: <Home /> }],
+  },
+
+  {
     element: <BaseLayout />,
     errorElement: <NoMatch />,
     children: [
-      { path: PathConstants.HOME, element: <Home /> },
       { path: PathConstants.ABOUT, element: <About /> },
       { path: PathConstants.CONTACT, element: <Contact /> },
       { path: PathConstants.EXPERIENCE, element: <Experience /> },

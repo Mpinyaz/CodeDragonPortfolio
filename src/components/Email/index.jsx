@@ -1,3 +1,4 @@
+import "./Email.css";
 import emailjs from "@emailjs/browser";
 import React, { useRef } from "react";
 import { toast } from "sonner";
@@ -28,36 +29,59 @@ export const Email = () => {
     <>
       <form
         ref={form}
-        className="flex flex-col justify-center gap-y-3"
+        className="contact-form flex flex-col justify-center gap-y-3"
         onSubmit={sendEmail}
       >
-        <label>Name</label>
-        <input
-          type="text"
-          placeholder="Your name"
-          name="user_name"
-          className="border-2 border-indigo-400 p-2 rounded-lg"
-        />
-        <label>Email</label>
-        <input
-          type="email"
-          name="user_email"
-          className="border-2 border-indigo-400 p-2 rounded-lg"
-          placeholder="Your email"
-        />
-        <label>Message</label>
-        <textarea
-          name="message"
-          id="message"
-          rows="5"
-          placeholder="Your message"
-          className="border-2 border-red-200 rounded-lg p-2"
-        ></textarea>
-        <button
-          type="submit"
-          className="mt-2 w-full h-10 bg-purple-200  shadow-link-shadow rounded-full gap-x-2 px-4 py-2 flex flex-row items-center justify-center font-semibold"
-        >
-          Send Message
+        <div className="form__item">
+          <input
+            type="text"
+            name="user_name"
+            className="form__input-text"
+            required
+          />
+
+          <label htmlFor="nameCompany" className="form__label">
+            <span className="form__label-name">Name *</span>
+            <div className="form__label-line">
+              <div className="form__label-bg"></div>
+            </div>
+            <div className="form__label-sq"></div>
+          </label>
+        </div>
+        <div className="form__item">
+          <input
+            type="email"
+            name="user_email"
+            className="form__input-text"
+            required
+          />
+
+          <label htmlFor="nameCompany" className="form__label">
+            <span className="form__label-name">Email *</span>
+            <div className="form__label-line">
+              <div className="form__label-bg"></div>
+            </div>
+            <div className="form__label-sq"></div>
+          </label>
+        </div>
+        <div className="form__item">
+          <textarea
+            name="message"
+            id="message"
+            className="form__input-text overflow-hidden"
+            required
+          ></textarea>
+          <label htmlFor="nameCompany" className="form__label">
+            <span className="form__label-name">Message *</span>
+            <div className="form__label-line">
+              <div className="form__label-bg"></div>
+            </div>
+            <div className="form__label-sq"></div>
+          </label>
+        </div>
+        <button type="submit" className="form__btn bg-purple-200 rounded-lg">
+          <span className="form__btn-txt font-extrabold">Send Email</span>
+          <div className="form__btn-bg"></div>
         </button>
       </form>
     </>
