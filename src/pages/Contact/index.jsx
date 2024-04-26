@@ -9,6 +9,35 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { animateBanner, revealImage } from "./animations";
+
+const arrLinks = [
+  {
+    title: "LinkedIn",
+    url: "https://www.linkedin.com/in/elton-mpinyuri-974984134/",
+    icon: <FaLinkedin size={25} />,
+  },
+  {
+    title: "Github",
+    url: "https://github.com/Mpinyaz",
+    icon: <GrGithub size={25} />,
+  },
+  {
+    title: "DEVTO",
+    url: "https://dev.to/mpinyaz",
+    icon: <BiLogoDevTo size={26} />,
+  },
+  {
+    title: "Instagram",
+    url: "https://www.instagram.com/mpinyaz/",
+    icon: <FaInstagramSquare size={25} />,
+  },
+  {
+    title: "Email Me",
+    url: "mailto:ebmpinyuri@gmail.com?subject=Lets%20chat",
+    icon: <LuMail size={23} />,
+  },
+];
+
 const Contact = () => {
   useDocumentTitle("Contact - 🐲");
   const Banner = useRef(null);
@@ -30,33 +59,6 @@ const Contact = () => {
     { section: Banner },
   );
 
-  const arrLinks = [
-    {
-      title: "LinkedIn",
-      url: "https://www.linkedin.com/in/elton-mpinyuri-974984134/",
-      icon: <FaLinkedin size={25} />,
-    },
-    {
-      title: "Github",
-      url: "https://github.com/Mpinyaz",
-      icon: <GrGithub size={25} />,
-    },
-    {
-      title: "DEVTO",
-      url: "https://dev.to/mpinyaz",
-      icon: <BiLogoDevTo size={26} />,
-    },
-    {
-      title: "Instagram",
-      url: "https://www.instagram.com/mpinyaz/",
-      icon: <FaInstagramSquare size={25} />,
-    },
-    {
-      title: "Email Me",
-      url: "mailto:ebmpinyuri@gmail.com?subject=Lets%20chat",
-      icon: <LuMail size={23} />,
-    },
-  ];
   const linkList = arrLinks.map((link) => (
     <div
       key={link.title}
@@ -129,4 +131,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export { Contact, arrLinks };
