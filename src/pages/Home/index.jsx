@@ -7,7 +7,7 @@ import { Services } from "../../components/Services";
 import { BsFillArrowLeftCircleFill } from "react-icons/bs";
 import { arrLinks } from "../Contact";
 import SmoothScrolling from "../../utils/SmoothScrolling";
-import gsap from "gsap";
+import { animateLinksIn, animateLinksOut } from "./animations";
 import "./Home.css";
 import { IoCloseCircle } from "react-icons/io5";
 const Home = () => {
@@ -33,46 +33,10 @@ const Home = () => {
 
   useEffect(() => {
     const sideBar = document.querySelector(".sidebar");
-    const sidebarItems = gsap.utils.toArray(".sidebar-items");
-    const overlayToggle = document.querySelector(".overlay-toggle");
-
-    const animateLinksIn = () => {
-      gsap.to(overlayToggle, {
-        left: "-100%",
-        duration: 1,
-        ease: "power4.out",
-      });
-      gsap.to(
-        sidebarItems,
-        { left: "0%", duration: 1, stagger: 0.075, ease: "power4.out" },
-        "<",
-      );
-      gsap.to(
-        ".home",
-        { filter: "blur(15px)", duration: 1, immediateRender: false },
-        "<",
-      );
-    };
-
-    const animateLinksOut = () => {
-      gsap.to(overlayToggle, { left: "0%", duration: 1, ease: "power4.out" });
-      gsap.to(
-        sidebarItems,
-        { left: "-110%", duration: 1, stagger: 0.075, ease: "power4.out" },
-        "<",
-      );
-      gsap.to(
-        ".home",
-        { filter: "blur(0px)", duration: 1, immediateRender: false },
-        "<",
-      );
-    };
-
     sideBarOpenRef.current.addEventListener("click", () => {
       sideBar.style.pointerEvents = "all";
       animateLinksIn();
     });
-
     sideBarCloseRef.current.addEventListener("click", animateLinksOut);
 
     return () => {
@@ -106,11 +70,10 @@ const Home = () => {
         </button>
         <div className="sidebar-items">
           <img
-            src="src/images/fierceDragon.jpeg"
-            className="rounded-full"
             height="200px"
             width="200px"
-            alt="Fierce Dragon"
+            className="portoimg"
+            src="src/images/Elton.jpeg"
           />
         </div>
         <div className="sidebar-items flex flex-col gap-y-6">{linkList}</div>

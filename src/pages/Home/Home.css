@@ -98,3 +98,11 @@
   letter-spacing: 1px;
   color: #fff;
 }
+
+.portoimg {
+  animation: morph 8s ease-in-out infinite;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  transition: all 1s ease-in-out;
+  z-index: 5;
+  box-shadow: 0 0 10px 5px rgba(102, 51, 153, 0.5);
+}
