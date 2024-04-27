@@ -86,23 +86,23 @@ const Home = () => {
       <div className="overlay-toggle">
         <button
           ref={sideBarOpenRef}
-          className="sidebarOpen__btn w-full  overflow-hidden block shadow-link-shadow relative bg-purple-200 font-bold rounded-full px-4 py-2 text-nowrap "
+          className="sidebar__btn w-full  overflow-hidden block shadow-link-shadow relative bg-purple-200 font-bold rounded-full px-4 py-2 text-nowrap "
         >
-          <span className="sidebarOpen__btn-txt flex items-center text-nowrap gap-x-1">
+          <span className="sidebar__btn-txt flex items-center text-nowrap gap-x-1">
             <BsFillArrowLeftCircleFill /> Contact Me
           </span>
-          <div className="sidebarOpen__btn-bg"></div>
+          <div className="sidebar__btn-bg"></div>
         </button>
       </div>
       <div className="sidebar">
         <button
           ref={sideBarCloseRef}
-          className="sidebarClose__btn w-[150px] h-[40px] sidebar-items shadow-link-shadow gap-x-2 relative block overflow-hidden bg-purple-200 font-bold rounded-full px-4 py-2"
+          className="sidebar__btn w-[150px] h-[40px] sidebar-items shadow-link-shadow gap-x-2 relative block overflow-hidden bg-purple-200 font-bold rounded-full px-4 py-2"
         >
-          <span className="sidebarClose__btn-txt flex items-center justify-center text-nowrap gap-x-1 uppercase">
+          <span className="sidebar__btn-txt flex items-center justify-center text-nowrap gap-x-1 uppercase">
             Close <IoCloseCircle />
           </span>
-          <div className="sidebarClose__btn-bg"></div>
+          <div className="sidebar__btn-bg"></div>
         </button>
         <div className="sidebar-items">
           <img
