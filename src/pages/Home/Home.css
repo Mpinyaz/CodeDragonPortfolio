@@ -2,7 +2,7 @@
 .experience,
 .services,
 .greeter {
-  margin: 2rem 0;
+  margin: 0rem 0;
 }
 
 .section-title {
@@ -105,4 +105,30 @@
   transition: all 1s ease-in-out;
   z-index: 5;
   box-shadow: 0 0 10px 5px rgba(102, 51, 153, 0.5);
+}
+
+.greeter_paragraph_text,
+.greeter_paragraph_text span {
+  font-size: clamp(1.5rem, 5vw, 6rem);
+  line-height: 1.2;
+}
+
+.greeter_paragraph_text::before {
+  content: "Info";
+  border: 2px solid #fff;
+  border-radius: 2rem;
+  padding: 0.2rem 0.8rem;
+  margin-right: 1rem;
+  font-size: clamp(1rem, 5vw, 2rem);
+}
+
+.greeter_background_image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+canvas {
+  width: 100%;
+  margin: 0;
+  background: hsla(0, 0%, 0%, 1);
 }
