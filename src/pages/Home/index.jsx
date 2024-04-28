@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 import useDocumentTitle from "../../context/useDocumentTitle";
-import { Experience } from "../../components/Experience";
 import { Education } from "../../components/Education";
 import { Greeter } from "../../components/Greeter";
 import { Services } from "../../components/Services";
@@ -11,7 +10,7 @@ import SmoothScrolling from "../../utils/SmoothScrolling";
 import { animateLinksIn, animateLinksOut, greeterScroll } from "./animations";
 import "./Home.css";
 import { IoCloseCircle } from "react-icons/io5";
-import { useLenis, ReactLenis } from "@studio-freight/react-lenis";
+import { ReactLenis } from "@studio-freight/react-lenis";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 const Home = () => {
@@ -63,13 +62,17 @@ const Home = () => {
       sideBarCloseRef.current.removeEventListener("click", animateLinksOut);
     };
   }, []);
-
   return (
     <>
       <ReactLenis
         ref={lenisRef}
         autoRaf={false}
-        options={{ lerp: 0.1, duration: 1.5, smoothTouch: true }}
+        options={{
+          lerp: 0.1,
+          duration: 1.5,
+          smoothTouch: true,
+          easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        }}
       >
         <div className="overlay-toggle">
           <button
