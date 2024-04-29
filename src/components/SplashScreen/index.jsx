@@ -86,7 +86,7 @@ export function SplashScreen() {
               />
             </figure>
           </div>
-          <div className="absolute z-10 top-0 left-0">
+          <div className="absolute z-10 top-0 left-0 w-full">
             <div className="splash_row">
               <div className="splash_row_text">
                 <h1>Software Developer</h1>
