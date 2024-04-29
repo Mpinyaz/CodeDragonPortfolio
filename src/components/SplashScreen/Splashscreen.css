@@ -1,0 +1,58 @@
+.splash {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  font-size: max(100vw / 1920 * 10);
+  overflow-x: hidden;
+}
+.splash_wrapper {
+  width: inherit;
+  height: inherit;
+  position: relative;
+}
+.splash_figure {
+  width: 100vw;
+  height: 100vh;
+}
+.splash_media {
+  position: absolute;
+  pointer-events: none;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+.splash_image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.splash_row {
+  font-size: 12vh;
+  height: 25vh;
+}
+
+.splash_row_text {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: inherit;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.splash_row_text h1 {
+  font-size: inherit;
+  line-height: 1;
+}
+
+.splash_row_text h4 {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.splash_row_separator {
+  border: 1px solid #fff;
+}

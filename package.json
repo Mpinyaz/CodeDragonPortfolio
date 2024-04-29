@@ -25,6 +25,7 @@
     "scrolltrigger": "^1.0.1",
     "sonner": "^1.4.41",
     "split-type": "^0.3.4",
+    "splitting": "^1.0.6",
     "three": "^0.152.2",
     "vanta": "^0.5.24"
   },
