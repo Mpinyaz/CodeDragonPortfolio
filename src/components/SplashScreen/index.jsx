@@ -1,5 +1,5 @@
 import { useLayoutEffect, useRef } from "react";
-import logo from "../../images/dragon.png";
+import logo from "/src/images/dragon.png";
 import gsap from "gsap";
 import React from "react";
 import Splitting from "splitting";

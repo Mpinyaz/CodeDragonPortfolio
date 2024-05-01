@@ -30,7 +30,7 @@
 }
 
 .splash_row {
-  font-size: 12vh;
+  font-size: clamp(12vh, 5vw, 25vh);
   height: 25vh;
 }
 

@@ -1,12 +1,12 @@
-.edu_vertical_heading {
+.cert_vertical_heading {
   line-height: 85%;
   border-left: 5px solid teal;
   font-size: clamp(1rem, 5vw, 3.75rem);
 }
-.edu_vertical_item {
+.cert_vertical_item {
   border-left: 3px solid #32205b;
 }
-.edu_vertical_item h2 {
+.cert_vertical_item h2 {
   font-size: 40px;
   font-stretch: expanded;
   line-height: 100%;
@@ -24,37 +24,33 @@
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
 }
-.edu_vertical_container {
+.cert_vertical_container {
   width: 95%;
   margin: auto;
 }
-.edu_vertical {
+.cert_vertical {
   padding: 50px 0;
   height: 200vh;
   width: 100vw;
   overflow-x: hidden;
 }
 
-.edu_col {
+.cert_col {
   width: 50%;
 }
 
-.edu_vertical_content {
+.cert_vertical_content {
   display: flex;
   justify-content: center;
   align-items: flex-start;
 }
 
-.edu_vertical_content .edu_col_left {
+.cert_vertical_content .cert_col_left {
   height: 100%;
 }
-.edu_vertical_content .edu_col.edu_col_right {
+.cert_vertical_content .cert_col.cert_col_right {
   width: 40%;
 }
-.edu_vertical_item:not(:last-child) {
+.cert_vertical_item:not(:last-child) {
   margin-bottom: 240px;
-}
-
-.edu_list {
-  list-style-type: disc;
 }

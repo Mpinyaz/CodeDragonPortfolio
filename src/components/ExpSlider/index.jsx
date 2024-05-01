@@ -1,9 +1,9 @@
 import scrollTrigger from "gsap/ScrollTrigger";
 import gsap from "gsap";
 import { useLayoutEffect, useRef } from "react";
-import "./HomeSlider.css";
+import "./ExpSlider.css";
 
-const Homeslider = () => {
+const Expslider = () => {
   const component = useRef();
   const slider = useRef();
   gsap.registerPlugin(scrollTrigger);
@@ -20,7 +20,6 @@ const Homeslider = () => {
           scrub: 1,
           // snap: 1 / (panels.length - 1),
           end: () => "bottom 32%" /*+ slider.current.offsetWidth*/,
-          markers: true,
         },
       });
     }, component);
@@ -30,13 +29,13 @@ const Homeslider = () => {
     <>
       <div ref={component} className="home-container overflow-x-hidden">
         <div ref={slider} className="slides">
-          <div className="bg-red-500 w-[100vw] h-[400px]">Red</div>
-          <div className="bg-green-500 w-[100vw] h-[400px]">Green</div>
-          <div className="bg-blue-500 w-[100vw] h-[400px]">Blue</div>
+          <div className="bg-red-500 w-[100vw] h-[100vh]">Red</div>
+          <div className="bg-green-500 w-[100vw] h-[100vh]">Green</div>
+          <div className="bg-blue-500 w-[100vw] h-[100vh]">Blue</div>
         </div>
       </div>
     </>
   );
 };
 
-export default Homeslider;
+export default Expslider;
