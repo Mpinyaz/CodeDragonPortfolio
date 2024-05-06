@@ -1,27 +1,13 @@
 import { useRef, useLayoutEffect } from "react";
 import "./ExpSlider.css";
 import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
+import { animateExpSlider } from "./animations";
 const Expslider = () => {
   const component = useRef();
   const slider = useRef();
-  gsap.registerPlugin(ScrollTrigger);
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
-      let panels = gsap.utils.toArray(".slides section");
-      gsap.to(panels, {
-        xPercent: -100 * (panels.length - 1),
-        ease: "none",
-        scrollTrigger: {
-          trigger: slider.current,
-          start: "top 8%",
-          pin: ".slides",
-          scrub: 1,
-          // snap: 1 / (panels.length - 1),
-          end: () => "bottom bottom" /*+ slider.current.offsetWidth*/,
-          markers: true,
-        },
-      });
+      animateExpSlider(slider);
     }, component);
     return () => ctx.revert();
   });
