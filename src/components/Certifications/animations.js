@@ -16,9 +16,9 @@ export const animateCertifications = () => {
   const cert_scroll = ScrollTrigger.create({
     animation: cert_tl,
     trigger: cert,
-    start: "top 30%",
+    start: "top top",
     end: "bottom bottom",
     scrub: true,
-    markers: true,
+    // markers: true,
   });
 };

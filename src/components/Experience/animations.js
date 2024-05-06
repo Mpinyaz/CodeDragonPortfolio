@@ -16,8 +16,9 @@ export const animateExperience = () => {
   const exp_scroll = ScrollTrigger.create({
     animation: exp_tl,
     trigger: exp,
-    start: "top 30%",
+    start: "top top",
     end: "bottom bottom",
     scrub: true,
+    // markers: true,
   });
 };

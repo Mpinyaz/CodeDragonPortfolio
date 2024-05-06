@@ -16,8 +16,9 @@ export const animateEducation = () => {
   const edu_scroll = ScrollTrigger.create({
     animation: edu_tl,
     trigger: edu,
-    start: "top 30%",
+    start: "top top",
     end: "bottom bottom",
     scrub: true,
+    // markers: true,
   });
 };

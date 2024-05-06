@@ -1,6 +1,6 @@
 import BaseLayout from "../layouts/BaseLayout";
 import HomeLayout from "../layouts/homeLayout";
-
+import ExpLayout from "../layouts/ExpLayout";
 import { lazy } from "react";
 import NoMatch from "../components/Error404";
 
@@ -23,14 +23,16 @@ const routes = [
     element: <HomeLayout />,
     children: [{ path: PathConstants.HOME, element: <Home /> }],
   },
-
+  {
+    element: <ExpLayout />,
+    children: [{ path: PathConstants.EXPERIENCE, element: <Experience /> }],
+  },
   {
     element: <BaseLayout />,
     errorElement: <NoMatch />,
     children: [
       { path: PathConstants.ABOUT, element: <About /> },
       { path: PathConstants.CONTACT, element: <Contact /> },
-      { path: PathConstants.EXPERIENCE, element: <Experience /> },
       { path: PathConstants.SKILLS, element: <Skills /> },
     ],
   },
