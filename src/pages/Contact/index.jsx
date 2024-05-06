@@ -9,7 +9,6 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { animateBanner, revealImage } from "./animations";
-
 const arrLinks = [
   {
     title: "LinkedIn",
@@ -37,7 +36,6 @@ const arrLinks = [
     icon: <LuMail size={23} />,
   },
 ];
-
 const Contact = () => {
   useDocumentTitle("Contact - 🐲");
   const Banner = useRef(null);
@@ -131,4 +129,4 @@ const Contact = () => {
   );
 };
 
-export { Contact, arrLinks };
+export default Contact;

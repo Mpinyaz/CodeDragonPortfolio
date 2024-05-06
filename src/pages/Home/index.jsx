@@ -1,18 +1,47 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 import useDocumentTitle from "../../context/useDocumentTitle";
-import { Education } from "../../components/Education";
 import { Greeter } from "../../components/Greeter";
 import { Services } from "../../components/Services";
 import { BsFillArrowLeftCircleFill } from "react-icons/bs";
-import { arrLinks } from "../Contact";
 import SmoothScrolling from "../../utils/SmoothScrolling";
 import { animateLinksIn, animateLinksOut, greeterScroll } from "./animations";
 import "./Home.css";
 import { IoCloseCircle } from "react-icons/io5";
+import { FaInstagramSquare, FaLinkedin } from "react-icons/fa";
+import { GrGithub } from "react-icons/gr";
+import { BiLogoDevTo } from "react-icons/bi";
+import { LuMail } from "react-icons/lu";
 import { ReactLenis } from "@studio-freight/react-lenis";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+const arrLinks = [
+  {
+    title: "LinkedIn",
+    url: "https://www.linkedin.com/in/elton-mpinyuri-974984134/",
+    icon: <FaLinkedin size={25} />,
+  },
+  {
+    title: "Github",
+    url: "https://github.com/Mpinyaz",
+    icon: <GrGithub size={25} />,
+  },
+  {
+    title: "DEVTO",
+    url: "https://dev.to/mpinyaz",
+    icon: <BiLogoDevTo size={26} />,
+  },
+  {
+    title: "Instagram",
+    url: "https://www.instagram.com/mpinyaz/",
+    icon: <FaInstagramSquare size={25} />,
+  },
+  {
+    title: "Email Me",
+    url: "mailto:ebmpinyuri@gmail.com?subject=Lets%20chat",
+    icon: <LuMail size={23} />,
+  },
+];
 const Home = () => {
   useDocumentTitle("Code Dragon");
   const lenisRef = useRef(null);
@@ -57,10 +86,10 @@ const Home = () => {
     });
     sideBarCloseRef.current.addEventListener("click", animateLinksOut);
 
-    return () => {
-      sideBarOpenRef.current.removeEventListener("click", animateLinksIn);
-      sideBarCloseRef.current.removeEventListener("click", animateLinksOut);
-    };
+    // return () => {
+    //   sideBarOpenRef.current.removeEventListener("click", animateLinksIn);
+    //   sideBarCloseRef.current.removeEventListener("click", animateLinksOut);
+    // };
   }, []);
   return (
     <>

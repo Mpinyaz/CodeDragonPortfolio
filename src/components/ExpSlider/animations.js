@@ -15,7 +15,6 @@ export const animateExpSlider = (slider) => {
       scrub: 1,
       // snap: 1 / (panels.length - 1),
       end: () => "bottom bottom" /*+ slider.current.offsetWidth*/,
-      markers: true,
     },
   });
 };

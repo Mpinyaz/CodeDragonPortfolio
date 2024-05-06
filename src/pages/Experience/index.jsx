@@ -50,34 +50,42 @@ const Experience = () => {
             easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
           }}
         >
-          <section className="bg-black">
-            <motion.button
-              type="button"
-              className="rounded-full p-2 relative radial-gradient-exp"
-              // onClick={console.log("Download CV")}
-              initial={{ "--btnx": "100%" }}
-              animate={{ "--btnx": "-100%" }}
-              transition={{
-                repeat: Infinity,
-                repeatType: "loop",
-                repeatDelay: 5,
-                type: "spring",
-                stiffness: 20,
-                damping: 15,
-                mass: 2,
-                scale: {
-                  type: "spring",
-                  stiffness: 10,
-                  damping: 5,
-                  mass: 0.1,
-                },
-              }}
+          <section className="bg-black flex justify-end gap-1 p-2">
+            <a
+              href="src/assets/CV_Elton_Mpinyuri.pdf"
+              download="Resume.pdf"
+              target="_blank"
+              className="flex items-center gap-1"
             >
-              <span className="text-neutral-100 tracking-wide font-bold h-full w-full block relative linear-mask">
-                <FaDownload size={24} />
-              </span>
-              <span className="block absolute inset-0 rounded-full p-[2px] linear-overlay"></span>
-            </motion.button>
+              <p className="font-bold text-white">Download Resume</p>
+              <motion.button
+                type="button"
+                className="rounded-full p-2 relative radial-gradient-exp"
+                // onClick={console.log("Download CV")}
+                initial={{ "--btnx": "100%" }}
+                animate={{ "--btnx": "-100%" }}
+                transition={{
+                  repeat: Infinity,
+                  repeatType: "loop",
+                  repeatDelay: 5,
+                  type: "spring",
+                  stiffness: 20,
+                  damping: 15,
+                  mass: 2,
+                  scale: {
+                    type: "spring",
+                    stiffness: 10,
+                    damping: 5,
+                    mass: 0.1,
+                  },
+                }}
+              >
+                <span className="text-neutral-100 tracking-wide font-bold h-full w-full block relative linear-mask">
+                  <FaDownload size={24} />
+                </span>
+                <span className="block absolute inset-0 rounded-full p-[2px] linear-overlay"></span>
+              </motion.button>
+            </a>
           </section>
           <section className="overflow-x-hidden">
             <Exper />
