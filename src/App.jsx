@@ -14,7 +14,7 @@ const App = () => {
     setTimeout(() => {
       setShowSplashscreen(false);
       localStorage.setItem("showedSplashscreen", JSON.stringify(true));
-    }, 9000);
+    }, 10000);
   }, []);
   return showSplashscreen ? (
     <SplashScreen />

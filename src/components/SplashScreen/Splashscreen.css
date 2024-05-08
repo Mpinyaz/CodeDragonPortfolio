@@ -5,15 +5,18 @@
   font-size: max(100vw / 1920 * 10);
   overflow-x: hidden;
 }
+
 .splash_wrapper {
   width: inherit;
   height: inherit;
   position: relative;
 }
+
 .splash_figure {
   width: 100vw;
   height: 100vh;
 }
+
 .splash_media {
   position: absolute;
   pointer-events: none;
@@ -30,7 +33,7 @@
 }
 
 .splash_row {
-  font-size: clamp(12vh, 5vw, 25vh);
+  font-size: clamp(10vh, 5vw, 22vh);
   height: 25vh;
 }
 
@@ -49,7 +52,7 @@
 }
 
 .splash_row_text h4 {
-  font-size: 3rem;
+  font-size: (1rem, 5vw, 2.2rem);
   line-height: 1;
 }
 
