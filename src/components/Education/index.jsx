@@ -10,7 +10,7 @@ export function Education() {
         {item.startPeriod}-{item.endPeriod}
       </small>
       <ul className="gap-2">
-        <li className="edu_list_item font-bold text-white">•{item.Overview}</li>
+        <li className="edu_list_item text-white">•{item.Overview}</li>
       </ul>
     </div>
   ));

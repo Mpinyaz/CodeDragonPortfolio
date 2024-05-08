@@ -5,7 +5,7 @@ export function Exper() {
   const exp = jsonData[0].employment.map((item, index) => (
     <div key={index} className="exp_vertical_item flex flex-col pl-2">
       <h2 className="font-semibold mb-3 text-3xl">{item.CompanyName}</h2>
-      <h3 className="font-normal">{item.occupation}</h3>
+      <h3 className="font-bold">{item.occupation}</h3>
       <small className="mb-2">
         {item.startPeriod}-{item.endPeriod}
       </small>
