@@ -10,7 +10,7 @@ export const animateEducation = () => {
   edu_tl.fromTo(
     edu_scroll_left,
     { y: 0 },
-    { y: "170vh", duration: 1, ease: "none" },
+    { y: "110vh", duration: 1, ease: "none" },
     0,
   );
   const edu_scroll = ScrollTrigger.create({

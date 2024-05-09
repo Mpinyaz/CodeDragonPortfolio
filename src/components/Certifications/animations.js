@@ -10,7 +10,7 @@ export const animateCertifications = () => {
   cert_tl.fromTo(
     cert_scroll_left,
     { y: 0 },
-    { y: "170vh", duration: 1, ease: "none" },
+    { y: "130vh", duration: 1, ease: "none" },
     0,
   );
   const cert_scroll = ScrollTrigger.create({

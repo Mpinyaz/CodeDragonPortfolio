@@ -14,18 +14,22 @@ import { animateExperience } from "../../components/Experience/animations";
 import { animateEducation } from "../../components/Education/animations";
 import { animateCertifications } from "../../components/Certifications/animations";
 import { animateExpSlider } from "../../components/ExpSlider/animations";
+import { animateProjects } from "../../components/Projects/animations";
 const Expslider = lazy(() => import("/src/components/ExpSlider"));
 import { scrollTo } from "./animations";
 import "/src/components/ExpSlider/ExpSlider.css";
+import { Project } from "../../components/Projects";
 const Experience = () => {
   const expRef = useRef(null);
   const eduRef = useRef(null);
   const certRef = useRef(null);
   const servRef = useRef(null);
+  const projectRef = useRef(null);
   const expBtn = useRef(null);
   const eduBtn = useRef(null);
   const certBtn = useRef(null);
   const servBtn = useRef(null);
+  const projectBtn = useRef(null);
   let lastActive = null;
   gsap.registerPlugin(ScrollTrigger);
   useEffect(() => {
@@ -33,6 +37,7 @@ const Experience = () => {
     masterTl
       .add(animateExperience())
       .add(animateEducation())
+      .add(animateProjects())
       .add(animateCertifications());
   }, []);
   useLayoutEffect(() => {
@@ -94,7 +99,9 @@ const Experience = () => {
               target="_blank"
               className="flex items-center gap-1"
             >
-              <p className="font-bold text-white">Download Resume</p>
+              <p className="font-bold text-white hidden sm:block">
+                Download Resume
+              </p>
               <motion.button
                 type="button"
                 className="rounded-full p-2 relative radial-gradient-exp"
@@ -139,6 +146,14 @@ const Experience = () => {
               }}
             >
               <span className="text-center p-2">Certifications</span>
+            </button>{" "}
+            <button
+              ref={projectBtn}
+              onClick={() => {
+                buttonScroll(projectRef, projectBtn);
+              }}
+            >
+              <span className="text-center p-2">Projects</span>
             </button>
             <button
               ref={servBtn}
@@ -159,6 +174,9 @@ const Experience = () => {
           </div>
           <div ref={certRef}>
             <Certifications />
+          </div>
+          <div ref={projectRef}>
+            <Project />
           </div>
         </section>
         <section className="h-[300vh] md:h-[115vh] overflow-hidden">

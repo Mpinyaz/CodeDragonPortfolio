@@ -10,7 +10,7 @@ export const animateExperience = () => {
   exp_tl.fromTo(
     exp_scroll_left,
     { y: 0 },
-    { y: "170vh", duration: 1, ease: "none" },
+    { y: "120vh", duration: 1, ease: "none" },
     0,
   );
   const exp_scroll = ScrollTrigger.create({

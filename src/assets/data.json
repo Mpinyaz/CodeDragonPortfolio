@@ -124,6 +124,22 @@
         "Location": "Online (Pyramid Learning)",
         "endPeriod": "2020"
       }
+    ],
+    "Projects": [
+      {
+        "CompanyName": "Intellidex",
+        "occupation": "Data Analyst",
+        "startPeriod": "Aug 2022",
+        "endPeriod": "Jun 2023",
+        "Location": "Johannesburg, Gauteng",
+        "JobDetail": [
+          "Sanlam BEE Empowerment Project: Identified and reported areas of improvement for collating and mining external unstructured data related to BEE scores across different sectors in the SA Economy.",
+          "Extract data from multiple sources, applying transformations, and loading into a database.",
+          "Spearheaded data wrangling and visualization projects using Power-Bi for enhanced clarity and interpretability",
+          "Interpreted data for stakeholders to provide insights on the current BEE demographics relative to long-term studies.",
+          "Worked closely with various teams to encourage constantly evolving experimental design and data analysis."
+        ]
+      }
     ]
   }
 ]
