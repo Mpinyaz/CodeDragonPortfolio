@@ -15,6 +15,7 @@ import { LuMail } from "react-icons/lu";
 import { ReactLenis } from "@studio-freight/react-lenis";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import HomeMenu from "../../components/HomeMenu";
 const arrLinks = [
   {
     title: "LinkedIn",
@@ -80,11 +81,17 @@ const Home = () => {
 
   useEffect(() => {
     const sideBar = document.querySelector(".sidebar");
+    const menu = document.querySelector(".menu-bar");
     sideBarOpenRef.current.addEventListener("click", () => {
+      menu.style.zIndex = -99;
       sideBar.style.pointerEvents = "all";
       animateLinksIn();
     });
-    sideBarCloseRef.current.addEventListener("click", animateLinksOut);
+    sideBarCloseRef.current.addEventListener("click", () => {
+      menu.style.zIndex = 250;
+      sideBar.style.pointerEvents = "all";
+      animateLinksOut();
+    });
 
     // return () => {
     //   sideBarOpenRef.current.removeEventListener("click", animateLinksIn);
@@ -134,6 +141,7 @@ const Home = () => {
           </div>
           <div className="sidebar-items flex flex-col gap-y-6">{linkList}</div>
         </div>
+        <HomeMenu />
         <div
           ref={homeRef}
           className="home w-full h-full bg-black p-0 m-0 overflow-x-hidden"

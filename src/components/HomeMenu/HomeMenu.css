@@ -1,0 +1,35 @@
+.menu-bar,
+.menu-overlay {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100vw;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 250;
+}
+.menu-bar a,
+.menu-open p {
+  color: #fff;
+  cursor: pointer;
+}
+
+.menu-close p {
+  color: #000;
+  cursor: pointer;
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100vw;
+  height: 100vh;
+  padding: 2em;
+  background: teal;
+  z-index: 265;
+  display: flex;
+  clip-path: polygon(0 0, 100% 0, 100% 0%, 0% 0%);
+}
