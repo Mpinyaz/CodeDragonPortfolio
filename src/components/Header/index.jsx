@@ -10,26 +10,20 @@ const Header = () => {
   const headerRef = useRef(null);
 
   useEffect(() => {
-    // Dynamically adjust padding of content area based on header height
-    const updatePadding = () => {
-      const headerHeight = headerRef.current.offsetHeight;
-      document.body.style.paddingTop = `${headerHeight}px`;
-    };
+    const headerHeight = headerRef.current.offsetHeight;
+    document.body.classList.add("with-header-padding");
+    document.body.style.setProperty("--header-height", `${headerHeight}px`);
 
-    // Call updatePadding initially and on window resize
-    updatePadding();
-    window.addEventListener("resize", updatePadding);
-
-    // Cleanup function to remove event listener
     return () => {
-      window.removeEventListener("resize", updatePadding);
+      document.body.classList.remove("with-header-padding");
+      document.body.style.removeProperty("--header-height");
     };
   }, []);
-
   const toggleCollapse = () => {
     setMenuOpen(!menuOpen);
   };
   const closeMenu = () => {
+    document.body.paddingTop = 0;
     setMenuOpen(false);
   };
 

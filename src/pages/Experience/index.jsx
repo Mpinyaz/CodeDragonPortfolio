@@ -97,7 +97,7 @@ const Experience = () => {
               href="src/assets/CV_Elton_Mpinyuri.pdf"
               download="Resume.pdf"
               target="_blank"
-              className="flex items-center gap-1"
+              className="flex items-center justify-center gap-1"
             >
               <p className="font-bold text-white hidden sm:block">
                 Download Resume

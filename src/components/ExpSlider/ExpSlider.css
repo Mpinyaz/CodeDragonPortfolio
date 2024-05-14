@@ -80,7 +80,7 @@ html.lenis {
 
 .w-single_gallery p {
   padding: 1rem;
-  width: 100%;
+  width: 75%;
   height: 100%;
   font-size: clamp(1.2rem, 5vw, 2.9rem);
   font-weight: 500;
