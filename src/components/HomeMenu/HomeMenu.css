@@ -156,14 +156,14 @@
   pointer-events: all;
   overflow: hidden;
 }
-
+.menu-overlay-bar > .menu-logo > .logo,
 .menuBannerText .banner div,
 .menuBannerText .banner::after {
   transition: transform 0.85s cubic-bezier(0.19, 1, 0.22, 1);
   font-size: clamp(1rem, 5vw, 2rem);
 }
-.menu-banner-item {
-  font-size: clamp(1rem, 5vw, 2rem);
+.menu-close-icon p {
+  font-size: clamp(1rem, 5vw, 1.5rem);
 }
 .menuBannerText .banner::after {
   content: attr(data-txt);
