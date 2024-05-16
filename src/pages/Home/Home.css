@@ -131,3 +131,7 @@ canvas {
   margin: 0;
   background: hsla(0, 0%, 0%, 1);
 }
+.masked {
+  mask-image: linear-gradient(to top, black 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to top, black 90%, transparent 100%);
+}

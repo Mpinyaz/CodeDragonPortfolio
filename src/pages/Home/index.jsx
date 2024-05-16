@@ -3,6 +3,7 @@ import React, { useEffect, useRef } from "react";
 import useDocumentTitle from "../../context/useDocumentTitle";
 import { Greeter } from "../../components/Greeter";
 import { Services } from "../../components/Services";
+import { HomeReveal } from "../../components/HomeReveal";
 import { BsFillArrowLeftCircleFill } from "react-icons/bs";
 import SmoothScrolling from "../../utils/SmoothScrolling";
 import { animateLinksIn, animateLinksOut, greeterScroll } from "./animations";
@@ -165,6 +166,11 @@ const Home = () => {
               </div>
             </div>
           </section>
+        </div>
+        <div className="overflow-hidden w-full h-[100vh] bg-black">
+          <div className="masked">
+            <HomeReveal />
+          </div>
         </div>
       </ReactLenis>
     </>
