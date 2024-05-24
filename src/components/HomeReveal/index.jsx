@@ -23,9 +23,9 @@ export function HomeReveal() {
       <div className="home_teal" onClick={handleAnimation}>
         <div className="home_teal_wrapper">
           <span className="home_teal_text text-white font-extrabold">
-            Let's Go
+            {`Let's Go`}
           </span>
-          <div class="pulsating-circle"></div>
+          <div className="pulsating-circle"></div>
         </div>
       </div>
       <section className="home_reveal">
