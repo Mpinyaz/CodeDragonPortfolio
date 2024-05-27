@@ -149,12 +149,12 @@ const About = () => {
                     Designer
                   </h1>
                   <p className="w-3/4 card font-spaceGrotesk text-center   italic">
-                    I'm probably not the typical designer positioned behind an
+                    {`I'm probably not the typical designer positioned behind an
                     Illustrator artboard adjusting pixels, but I design.
                     Immersed in stylesheets tweaking font sizes and
                     contemplating layouts is where you'll find me. I'm committed
                     to creating fluent user experiences while staying
-                    fashionable.
+                    fashionable.`}
                   </p>
                 </div>
               </div>

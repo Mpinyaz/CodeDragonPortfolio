@@ -19,3 +19,141 @@
     justify-content: center;
   }
 }
+
+.about_page {
+  --primary: rgb(240, 246, 255);
+  --secondary: #212121;
+  --border: 2px solid #21212157;
+  --ease: cubic-bezier(0.255, 0.655, 0.02, 0.995);
+  --transition-width: width 0.64s var(--ease);
+  --transition-opacity: opacity 1.2s var(--ease);
+  --transition-transform: transform 1.2s var(--ease);
+  /* font-size: calc(100vw / 1920 * 10); */
+  color: var(--secondary);
+  padding: 2rem;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.about_page h1 {
+  font-size: 15rem;
+  line-height: 0.8;
+}
+.about_page h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.about_page p {
+  font-size: 3.2rem;
+}
+.about_page span {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+.about_col_caption span,
+.about_col_title h2,
+.about_col_title p,
+.about_col_number h1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.--mobile {
+  display: none;
+}
+
+.about_section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: var(--border);
+  border-radius: 3.2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.about_header {
+  border-bottom: var(--border);
+}
+
+.about_header_list {
+  display: flex;
+  width: 100%;
+}
+.about_header_list_item {
+  font-size: 3.2rem;
+  padding: 2rem;
+}
+
+.about_header_list_item:nth-child(1) {
+  flex: 1;
+  border-right: var(--border);
+}
+
+.about_header_list_item:nth-child(2) {
+  flex: 0.25;
+  border-right: var(--border);
+}
+
+.about_header_list_item:nth-child(3) {
+  flex: 1;
+  border-right: var(--border);
+}
+
+.about_header_list_item:nth-child(4) {
+  flex: 0.25;
+}
+
+.about_container {
+  display: flex;
+  width: 100%;
+  height: inherit;
+  flex: wrap;
+}
+
+.about_col {
+  position: relative;
+  width: calc(100% / 4);
+  max-width: 100%;
+  border-right: var(--border);
+  padding: 3rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: var(--transition-width);
+  overflow: visible;
+}
+
+.about_col:last-child {
+  border: none;
+}
+
+.about_col.active {
+  width: 200rem;
+  transition: var(--transition-width);
+  transform-origin: left;
+}
+
+.about_col.active .about_col_media {
+  opacity: 1;
+  transition: var(--transition-opacity);
+}
+
+.about_col_media {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  opacity: 0;
+  transition: var(--transition-opacity);
+}
+
+.about_col_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
