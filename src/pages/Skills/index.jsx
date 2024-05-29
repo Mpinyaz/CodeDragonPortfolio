@@ -35,148 +35,165 @@ function Skills() {
       if (vantaEffect) vantaEffect.destroy();
     };
   }, [vantaEffect]);
-  // return (
-  //   <>
-  //     <div ref={vantaRef}>
-  //       <div className="card mt-5 flex flex-col items-center mx-16 p-2 my-6">
-  //         <section className="text-white flex flex-col xl:flex-row mx-60 mb-6 items-start lg:items-start gap-4">
-  //           <h1 className="basis-1/2 text-5xl font-extrabold">
-  //             {"CodeDragon - Where Coding"}
-  //             <br />
-  //             <span>Meets Creativity</span>
-  //           </h1>
-  //           <div className="basis-1/2 flex flex-col">
-  //             <h1 className="text-2xl mb-3 font-semibold">
-  //               {"Skills & Experience"}
-  //             </h1>
-  //             <span className="mb-3">
-  //               {
-  //                 "I'm Elton, a Software developer on a mission to turn challenges into opportunities. With a keen eye for design and a love for clean code, I specialize in crafting engaging and user-friendly web experiences."
-  //               }
-  //             </span>
-  //             <span className="blinking-cursor">
-  //               <h1 className="text-3xl italic">
-  //                 {`"A problem is a chance for you to do your best."` +
-  //                   " - Duke Ellington"}
-  //                 <span>|</span>
-  //               </h1>
-  //             </span>
-  //           </div>
-  //         </section>
-  //         <section className="flex flex-col lg:flex-row lg:items-start items-center box-border m-0 p-2 my-5 justify-start space-x-3 w-auto">
-  //           <h1 className="font-extrabold text-white text-4xl text-start">
-  //             Tooling:
-  //           </h1>
-  //           <Carousel />
-  //         </section>
-  //         <SkillsCollage />
-  //       </div>
-  //     </div>
-  //   </>
-  // );
+
+  useEffect(() => {
+    const sectionCols = document.querySelectorAll(".about_col");
+    const isDesktop = window.matchMedia("(min-width: 768px)");
+
+    const addListener = () => {
+      sectionCols.forEach((col) => {
+        col.addEventListener("mouseenter", handleMouseEnter);
+      });
+    };
+
+    const removeListener = () => {
+      sectionCols.forEach((col) => {
+        col.removeEventListener("mouseenter", handleMouseEnter);
+      });
+    };
+
+    const handleMouseEnter = (event) => {
+      sectionCols.forEach((col) => col.classList.remove("active"));
+      event.currentTarget.classList.add("active");
+    };
+
+    if (isDesktop.matches) {
+      addListener();
+    }
+
+    return () => {
+      removeListener();
+    };
+  }, []);
+
   return (
     <>
-      <div ref={vantaRef} className="about_page w-full h-full">
-        <div className="about_section font-spaceGrotesk bg-white">
-          <div className="about_header">
-            <div className="about_header_list">
-              <div className="about_header_list_item">Elton Mpinyuri</div>
-              <div className="about_header_list_item --desktop"></div>
-              <div className="about_header_list_item --desktop"></div>
-              <div className="about_header_list_item">
-                <p>&#x2014;</p>
-              </div>
-            </div>
-          </div>
-          <div className="about_container">
-            <div className="about_col">
-              <div className="about_col_media">
-                <img
-                  src="/src/assets/homeMenu1.jpg"
-                  alt=""
-                  className="about_col_img"
-                />
-              </div>
-              <div className="relative top-0 left-0 w-full h-full">
-                <div className="about_col_caption">
-                  <span>Push the boundaries of design</span>
+      <div
+        ref={vantaRef}
+        className="w-full h-[150vh] flex flex-col items-center gap-5"
+      >
+        <div className="about_page max-h-[80vh] max-md:max-h-[120vh] overflow-hidden">
+          <div className="about_section font-spaceGrotesk text-white">
+            <div className="about_header">
+              <div className="about_header_list">
+                <div className="about_header_list_item bg-black">
+                  Elton Mpinyuri
                 </div>
-                <div className="about_col_title">
-                  <h2>Elevate</h2>
-                  <p className="--mobile">Discover More &rarr;</p>
-                </div>
-                <div className="about_col_number">
-                  <h1>1</h1>
-                </div>
-              </div>
-            </div>
-            <div className="about_col">
-              <div className="about_col_media">
-                <img
-                  src="/src/assets/homeMenu2.jpg"
-                  alt=""
-                  className="about_col_img"
-                />
-              </div>
-              <div className="relative top-0 left-0 w-full h-full flex flex-col items-center justify-between">
-                <div className="about_col_caption">
-                  <span>Transcending the ordinary and innovation</span>
-                </div>
-                <div className="about_col_title">
-                  <h2>Elevate</h2>
-                  <p className="--mobile">Discover More &rarr;</p>
-                </div>
-                <div className="about_col_number">
-                  <h1>2</h1>
-                </div>
-              </div>
-            </div>
-            <div className="about_col">
-              <div className="about_col_media">
-                <img
-                  src="/src/assets/homeMenu3.jpg"
-                  alt=""
-                  className="about_col_img"
-                />
-              </div>
-              <div className="relative top-0 left-0 w-full h-full">
-                <div className="about_col_caption">
-                  <span>Challenge conventions and redefine the boundaries</span>
-                </div>
-                <div className="about_col_title">
-                  <h2>Reimagine</h2>
-                  <p className="--mobile">Discover More &rarr;</p>
-                </div>
-                <div className="about_col_number">
-                  <h1>3</h1>
-                </div>
-              </div>
-            </div>
-            <div className="about_col">
-              <div className="about_col_media">
-                <img
-                  src="/src/assets/homemenu4.jpg"
-                  alt=""
-                  className="about_col_img"
-                />
-              </div>
-              <div className="relative top-0 left-0 w-full h-full">
-                <div className="about_col_caption">
-                  <span>
-                    Engage with the spaces designed to fully captivate and
-                    envelop
+                <div className="about_header_list_item --desktop bg-black"></div>
+                <div className="about_header_list_item --desktop bg-black">
+                  <span className="blinking-cursor">
+                    <p className="italic">
+                      {`"A problem is a chance for you to do your best."` +
+                        " - Duke Ellington"}
+                      <span>|</span>
+                    </p>
                   </span>
                 </div>
-                <div className="about_col_title">
-                  <h2>Immerse</h2>
-                  <p className="--mobile">Discover More &rarr;</p>
+                <div className="about_header_list_item bg-black">
+                  <p>&#x2014;</p>
                 </div>
-                <div className="about_col_number">
-                  <h1>4</h1>
+              </div>
+            </div>
+            <div className="about_container">
+              <div className="about_col">
+                <div className="about_col_media max-sm:hidden">
+                  <img
+                    src="/src/assets/mecha1.jpg"
+                    alt=""
+                    className="about_col_img"
+                  />
+                </div>
+                <div className="relative top-0 left-0 w-full h-auto flex md:flex-col items-center justify-end md:justify-between gap-y-4 max-md:gap-x-8">
+                  <div className="about_col_title">
+                    <h2>Elevate</h2>
+                    <p className="--mobile">Discover More &rarr;</p>
+                  </div>
+                  <div className="about_col_number">
+                    <h1>1</h1>
+                  </div>
+                  <div className="about_col_caption text-center  --desktop">
+                    <span>
+                      Push the boundaries of UX design and animation layouts
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div className="about_col">
+                <div className="about_col_media max-sm:hidden">
+                  <img
+                    src="/src/assets/mecha2.jpg"
+                    alt=""
+                    className="about_col_img"
+                  />
+                </div>
+                <div className="relative top-0 left-0 w-full h-auto flex md:flex-col items-center md:justify-between justify-end gap-y-4 max-md:gap-x-8">
+                  <div className="about_col_title">
+                    <h2>Innovate</h2>
+                    <p className="--mobile">Discover More &rarr;</p>
+                  </div>
+                  <div className="about_col_number">
+                    <h1>2</h1>
+                  </div>
+                  <div className="about_col_caption text-center --desktop">
+                    <span>Transcending the ordinary and innovation</span>
+                  </div>
+                </div>
+              </div>
+              <div className="about_col">
+                <div className="about_col_media max-sm:hidden">
+                  <img
+                    src="/src/assets/mecha3.jpg"
+                    alt=""
+                    className="about_col_img"
+                  />
+                </div>
+                <div className="relative top-0 left-0 w-full h-auto flex md:flex-col items-center md:justify-between justify-end gap-y-4 max-md:gap-x-8">
+                  <div className="about_col_title">
+                    <h2>Reimagine</h2>
+                    <p className="--mobile">Discover More &rarr;</p>
+                  </div>
+                  <div className="about_col_number">
+                    <h1>3</h1>
+                  </div>
+                  <div className="about_col_caption text-center --desktop">
+                    <span>
+                      Challenge conventions and redefine the boundaries
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div className="about_col">
+                <div className="about_col_media max-sm:hidden">
+                  <img
+                    src="/src/assets/mecha4.jpg"
+                    alt=""
+                    className="about_col_img"
+                  />
+                </div>
+                <div className="about_last relative top-0 left-0 w-full h-auto flex md:flex-col items-center md:justify-between justify-end gap-y-4 max-md:gap-x-8 max-md:mt-4">
+                  <div className="about_col_title">
+                    <h2>Immerse</h2>
+                    <p className="--mobile">Discover More &rarr;</p>
+                  </div>
+                  <div className="about_col_number">
+                    <h1>4</h1>
+                  </div>
+                  <div className="about_col_caption text-center --desktop">
+                    <span>
+                      Engage with the spaces designed to fully captivate and
+                      envelop
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+        <div className="flex flex-col items-center mb-3">
+          <h1 className="font-spaceGrotesk font-bold text-5xl text-white uppercase">
+            Toolkit & Skills
+          </h1>
+          <Carousel />
         </div>
       </div>
     </>

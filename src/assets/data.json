@@ -35,7 +35,7 @@
         "CompanyName": "DIGITAL SOLUTION FOUNDRY",
         "occupation": "Software Developer/Data Analyst",
         "startPeriod": "Nov 2022",
-        "endPeriod": "Present",
+        "endPeriod": "March 2024",
         "Location": "Johannesburg, Gauteng",
         "JobDetail": [
           "data wrangling and management for different environments using Microsoft Azure Services",
@@ -138,6 +138,19 @@
           "Spearheaded data wrangling and visualization projects using Power-Bi for enhanced clarity and interpretability",
           "Interpreted data for stakeholders to provide insights on the current BEE demographics relative to long-term studies.",
           "Worked closely with various teams to encourage constantly evolving experimental design and data analysis."
+        ]
+      },
+      {
+        "CompanyName": "Cosumatech",
+        "occupation": "Technical Project Consultant",
+        "startPeriod": "April 2023",
+        "endPeriod": "Present",
+        "Location": "Johannesburg, Gauteng",
+        "JobDetail": [
+          "Evaluate project requirements and determine the scope and effort required for successful completion",
+          "Collaborate with development teams to ensure alignment with architectural standards and best practices",
+          "Act as a liaison between technical teams and stakeholders to ensure clear communication and alignment.",
+          "Design, implement, and manage cloud infrastructure to support software development and deployment."
         ]
       }
     ]
