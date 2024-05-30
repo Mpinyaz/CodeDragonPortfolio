@@ -1,8 +1,8 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import useDocumentTitle from "../../context/useDocumentTitle";
-import { Greeter } from "../../components/Greeter";
-import { Services } from "../../components/Services";
+import profilepic from "../../images/Elton.jpeg";
+import eltonpro from "../../assets/elton-pro.jpg";
 import { HomeReveal } from "../../components/HomeReveal";
 import { BsFillArrowLeftCircleFill } from "react-icons/bs";
 import SmoothScrolling from "../../utils/SmoothScrolling";
@@ -137,7 +137,7 @@ const Home = () => {
               height="200px"
               width="200px"
               className="portoimg"
-              src="src/images/Elton.jpeg"
+              src={profilepic}
             />
           </div>
           <div className="sidebar-items flex flex-col gap-y-6">{linkList}</div>
@@ -151,7 +151,7 @@ const Home = () => {
             <div className="greeter_wrapper">
               <img
                 className="greeter_background_image absolute top-0 left-0 w-full z-20 h-[180vh]"
-                src="src/assets/elton-pro.jpg"
+                src={eltonpro}
                 alt="Elton"
               />
               <div className="greeter_paragraph top-0 left-0 absolute h-full w-full pt-[10vh] pl-[20vw] pr-[10vw] pb-[40rem] text-end z-40">
