@@ -1,7 +1,7 @@
 import "./contact.css";
-import { Email } from "../../components/Email";
-import fierceDragon from "../../images/fierceDragon.jpeg";
-import useDocumentTitle from "../../context/useDocumentTitle";
+import { Email } from "./../../components/Email";
+import fierceDragon from "./../../images/fierceDragon.jpeg";
+import useDocumentTitle from "./../../context/useDocumentTitle";
 import { FaInstagramSquare, FaLinkedin } from "react-icons/fa";
 import { GrGithub } from "react-icons/gr";
 import { BiLogoDevTo } from "react-icons/bi";
