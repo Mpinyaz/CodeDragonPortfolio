@@ -1,11 +1,19 @@
 import { useState, useEffect, useRef, Suspense } from "react";
 import HALO from "vanta/dist/vanta.halo.min";
 import * as THREE from "three";
+import tgraph1 from "./../../images/trading-graph2.png";
+import tgraph2 from "./../../images/trading-graph.jpeg";
+import planet2 from "./../../assets/purp-planet-small.jpeg";
+import planet from "./../../assets/purp-planet.jpeg";
+import prof2 from "./../../assets/Elton-small.jpeg";
+import prof1 from "./../../assets/Elton.jpeg";
+import waves2 from "./../../assets/waves-small.jpeg";
+import waves from "./../../assets/waves.jpeg";
 import "./About.css";
-import useDocumentTitle from "/src/context/useDocumentTitle";
+import useDocumentTitle from "./../../context/useDocumentTitle";
 import gsap from "gsap";
 import { CustomEase } from "gsap/CustomEase";
-import LazyImg from "/src/components/LazyImg";
+import LazyImg from "./../../components/LazyImg";
 const About = () => {
   useDocumentTitle("About");
   const [vantaEffect, setVantaEffect] = useState(0);
@@ -116,8 +124,8 @@ const About = () => {
               <div className="abt-card">
                 <LazyImg
                   className=""
-                  placeholder="src/images/trading-graph2.png"
-                  src="src/images/trading-graph.jpeg"
+                  placeholder={tgraph1}
+                  src={tgraph2}
                   alt="Finance"
                   width="100%"
                 />
@@ -135,8 +143,8 @@ const About = () => {
               <div className="abt-card">
                 <LazyImg
                   className=""
-                  placeholder="src/assets/purp-planet-small.jpeg"
-                  src="src/assets/purp-planet.jpeg"
+                  placeholder={planet2}
+                  src={planet}
                   alt="Finance"
                   width="100%"
                 />
@@ -161,8 +169,8 @@ const About = () => {
               <div className="abt-card">
                 <LazyImg
                   className=""
-                  placeholder="src/assets/Elton-small.jpeg"
-                  src="src/assets/Elton.jpeg"
+                  placeholder={prof2}
+                  src={prof1}
                   alt="Finance"
                   width="100%"
                 />
@@ -183,8 +191,8 @@ const About = () => {
               <div className="abt-card">
                 <LazyImg
                   className=""
-                  placeholder="src/assets/waves-small.jpeg"
-                  src="src/assets/waves.jpeg"
+                  placeholder={waves2}
+                  src={waves}
                   alt="Finance"
                   width="100%"
                 />

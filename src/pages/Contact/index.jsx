@@ -1,5 +1,6 @@
 import "./contact.css";
 import { Email } from "../../components/Email";
+import fierceDragon from "../../images/fierceDragon.jpeg";
 import useDocumentTitle from "../../context/useDocumentTitle";
 import { FaInstagramSquare, FaLinkedin } from "react-icons/fa";
 import { GrGithub } from "react-icons/gr";
@@ -78,7 +79,7 @@ const Contact = () => {
       <section ref={Banner} className="mb-2 p-2 gap-2">
         <div className="banner flex justify-center items-center">
           <img
-            src="src/images/fierceDragon.jpeg"
+            src={fierceDragon}
             ref={bannerImage}
             alt="banner-image"
             className="rounded-full"

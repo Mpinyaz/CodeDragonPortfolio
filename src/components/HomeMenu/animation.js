@@ -1,4 +1,9 @@
 import gsap from "gsap";
+import homemenu1 from "./../../assets/homeMenu1.jpg";
+import homemenu2 from "./../../assets/homeMenu2.jpg";
+import homemenu3 from "./../../assets/homeMenu3.jpg";
+import homemenu4 from "./../../assets/homeMenu4.jpg";
+import homemenu5 from "./../../assets/homeMenu5.jpg";
 
 export const animateMenuOverlay = () => {
   gsap.set(".menu-link-item", { y: -800 });
@@ -19,14 +24,7 @@ export const animateMenuOverlay = () => {
 };
 
 export const animateMenuOverlayItems = () => {
-  const imageSources = [
-    "src/assets/homeMenu1.jpg",
-    "src/assets/homeMenu2.jpg",
-    "src/assets/homeMenu3.jpg",
-    "src/assets/homeMenu4.jpg",
-    "src/assets/homeMenu5.jpg",
-  ];
-
+  const imageSources = [homemenu1, homemenu2, homemenu3, homemenu4, homemenu5];
   const menuItems = document.querySelectorAll(".menu-link-item");
 
   menuItems.forEach((item) => {

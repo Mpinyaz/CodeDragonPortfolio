@@ -1,10 +1,13 @@
-import { SkillsCollage } from "../../components/Skills";
+import mecha1 from "./../../assets/mecha1.jpg";
+import mecha2 from "./../../assets/mecha2.jpg";
+import mecha3 from "./../../assets/mecha3.jpg";
+import mecha4 from "./../../assets/mecha4.jpg";
 import "./Skills.css";
 import Carousel from "../../components/Carousel";
 import { useRef, useState, useEffect } from "react";
 import HALO from "vanta/dist/vanta.halo.min";
 import * as THREE from "three";
-import useDocumentTitle from "/src/context/useDocumentTitle";
+import useDocumentTitle from "./../../context/useDocumentTitle";
 function Skills() {
   useDocumentTitle("About");
   const [vantaEffect, setVantaEffect] = useState(0);
@@ -97,11 +100,7 @@ function Skills() {
             <div className="about_container">
               <div className="about_col">
                 <div className="about_col_media max-sm:hidden">
-                  <img
-                    src="/src/assets/mecha1.jpg"
-                    alt=""
-                    className="about_col_img"
-                  />
+                  <img src={mecha1} alt="" className="about_col_img" />
                 </div>
                 <div className="relative top-0 left-0 w-full h-auto flex md:flex-col items-center justify-end md:justify-between gap-y-4 max-md:gap-x-8">
                   <div className="about_col_title">
@@ -120,11 +119,7 @@ function Skills() {
               </div>
               <div className="about_col">
                 <div className="about_col_media max-sm:hidden">
-                  <img
-                    src="/src/assets/mecha2.jpg"
-                    alt=""
-                    className="about_col_img"
-                  />
+                  <img src={mecha2} alt="" className="about_col_img" />
                 </div>
                 <div className="relative top-0 left-0 w-full h-auto flex md:flex-col items-center md:justify-between justify-end gap-y-4 max-md:gap-x-8">
                   <div className="about_col_title">
@@ -141,11 +136,7 @@ function Skills() {
               </div>
               <div className="about_col">
                 <div className="about_col_media max-sm:hidden">
-                  <img
-                    src="/src/assets/mecha3.jpg"
-                    alt=""
-                    className="about_col_img"
-                  />
+                  <img src={mecha3} alt="" className="about_col_img" />
                 </div>
                 <div className="relative top-0 left-0 w-full h-auto flex md:flex-col items-center md:justify-between justify-end gap-y-4 max-md:gap-x-8">
                   <div className="about_col_title">
@@ -164,11 +155,7 @@ function Skills() {
               </div>
               <div className="about_col">
                 <div className="about_col_media max-sm:hidden">
-                  <img
-                    src="/src/assets/mecha4.jpg"
-                    alt=""
-                    className="about_col_img"
-                  />
+                  <img src={mecha4} alt="" className="about_col_img" />
                 </div>
                 <div className="about_last relative top-0 left-0 w-full h-auto flex md:flex-col items-center md:justify-between justify-end gap-y-4 max-md:gap-x-8 max-md:mt-4">
                   <div className="about_col_title">
