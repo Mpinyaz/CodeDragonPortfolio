@@ -1,15 +1,12 @@
 import BaseLayout from "../layouts/BaseLayout";
 import HomeLayout from "../layouts/homeLayout";
 import ExpLayout from "../layouts/ExpLayout";
-import { lazy } from "react";
 import NoMatch from "../components/Error404";
-
 import About from "../pages/About/";
-const Home = lazy(() => import("../pages/Home"));
-const Contact = lazy(() => import("../pages/Contact"));
-const Skills = lazy(() => import("../pages/Skills"));
-const Experience = lazy(() => import("../pages/Experience"));
-
+import Home from "./../pages/Home";
+import Contact from "./../pages/Contact";
+import Skills from "../pages/Skills";
+import Experience from "../pages/Experience";
 export const PathConstants = {
   HOME: "/",
   ABOUT: "/about",
