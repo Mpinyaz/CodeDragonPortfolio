@@ -2,6 +2,8 @@ import "./HomeReveal.css";
 import { useRef, useEffect, useState } from "react";
 import { initAnimation } from "./animations";
 import { IoSunnyOutline } from "react-icons/io5";
+import animegirl from "./../../assets/animegirl.jpg";
+import dragon from "./../../assets/fiercedragon.jpeg";
 export function HomeReveal() {
   const [isActive, setIsActive] = useState(false);
   const homeRevealRef = useRef(null);
@@ -50,7 +52,7 @@ export function HomeReveal() {
             <div className="home_reveal_left_container z-40">
               <div className="home_reveal_left_container_grid">
                 <img
-                  src="/src/assets/animegirl.jpg"
+                  src={animegirl}
                   alt="animegirl"
                   className="h-full object-cover"
                 />
@@ -110,7 +112,7 @@ export function HomeReveal() {
             <div className="home_reveal_right_container z-50 reveal_top">
               <figure className="home_reveal_right_container_media">
                 <img
-                  src="/src/assets/fiercedragon.jpeg"
+                  src={dragon}
                   alt="Planet"
                   className="home_reveal_right_container_media_image"
                 />

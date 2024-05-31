@@ -1,5 +1,6 @@
 import { useLayoutEffect, useRef } from "react";
-import logo from "/src/images/dragon.png";
+import logo from "./../../images/dragon.png";
+import cherryblossom from "./../../assets/cherryblossom.jpg";
 import gsap from "gsap";
 import Splitting from "splitting";
 import "./Splashscreen.css";
@@ -79,7 +80,7 @@ export function SplashScreen() {
           <div className="splash_media">
             <figure className="splash_figure">
               <img
-                src="/src/assets/cherryblossom.jpg"
+                src={cherryblossom}
                 alt="Splash Image"
                 className="splash_image"
               />

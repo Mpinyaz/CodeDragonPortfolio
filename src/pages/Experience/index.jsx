@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { gsap } from "gsap";
 import { motion } from "framer-motion";
-import { Exper } from "/src/components/Experience";
-import { Education } from "/src/components/Education";
-import { Certifications } from "/src/components/Certifications";
+import { Exper } from "./../../components/Experience";
+import { Education } from "./../../components/Education";
+import { Certifications } from "./../../components/Certifications";
 import { lazy } from "react";
 import { FaDownload } from "react-icons/fa";
 import { useRef, useEffect, useLayoutEffect } from "react";
@@ -15,9 +15,10 @@ import { animateEducation } from "../../components/Education/animations";
 import { animateCertifications } from "../../components/Certifications/animations";
 import { animateExpSlider } from "../../components/ExpSlider/animations";
 import { animateProjects } from "../../components/Projects/animations";
-const Expslider = lazy(() => import("/src/components/ExpSlider"));
+const Expslider = lazy(() => import("./../../components/ExpSlider"));
 import { scrollTo } from "./animations";
-import "/src/components/ExpSlider/ExpSlider.css";
+import "./../../components/ExpSlider/ExpSlider.css";
+import cv from "./../../assets/CV_Elton_Mpinyuri.pdf";
 import { Project } from "../../components/Projects";
 const Experience = () => {
   const expRef = useRef(null);
@@ -25,7 +26,6 @@ const Experience = () => {
   const certRef = useRef(null);
   const servRef = useRef(null);
   const projectRef = useRef(null);
-  const expBtn = useRef(null);
   const eduBtn = useRef(null);
   const certBtn = useRef(null);
   const servBtn = useRef(null);
@@ -94,9 +94,10 @@ const Experience = () => {
               </div>
             </Link>
             <a
-              href="src/assets/CV_Elton_Mpinyuri.pdf"
+              href={cv}
               download="Resume.pdf"
               target="_blank"
+              rel="noreferrer noopener"
               className="flex items-center justify-center gap-1"
             >
               <p className="font-bold text-white hidden sm:block">
@@ -146,7 +147,7 @@ const Experience = () => {
               }}
             >
               <span className="text-center p-2">Certifications</span>
-            </button>{" "}
+            </button>
             <button
               ref={projectBtn}
               onClick={() => {
