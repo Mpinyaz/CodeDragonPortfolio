@@ -1,7 +1,7 @@
 import gsap from "gsap";
 import homemenu1 from "./../../assets/homeMenu1.jpg";
 import homemenu2 from "./../../assets/homeMenu2.jpg";
-import homemenu3 from "./../../assets/homeMenu3.jpg";
+import homemenu3 from "./../../assets/homemenu3.jpg";
 import homemenu4 from "./../../assets/homeMenu4.jpg";
 import homemenu5 from "./../../assets/homeMenu5.jpg";
 
