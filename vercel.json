@@ -1,34 +1,8 @@
 {
-  "version": 2,
-  "builds": [
+  "rewrites": [
     {
-      "src": "vite.config.js",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist"
-      }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/",
-      "dest": "/"
-    },
-    {
-      "src": "/about",
-      "dest": "/about"
-    },
-    {
-      "src": "/experience",
-      "dest": "/experience"
-    },
-    {
-      "src": "/skills",
-      "dest": "/skills"
-    },
-    {
-      "src": "/contact",
-      "dest": "/contact"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
